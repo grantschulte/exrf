@@ -1,0 +1,29 @@
+{
+  "name": "Basics",
+  "version": "0.0.1",
+  "description": "Nothing but the basics Express starter.",
+  "main": "server.js",
+  "scripts": {
+    "lint": "eslint ./**/*.js",
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Grant J. Schulte <schulte.grant@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "1.18.2",
+    "chai": "4.1.2",
+    "cookie-parser": "1.4.3",
+    "dotenv": "4.0.0",
+    "eslint": "4.13.1",
+    "express": "4.16.2",
+    "mocha": "4.0.1",
+    "mongodb": "3.0.0-rc0",
+    "mongoose": "4.13.7",
+    "morgan": "1.9.0",
+    "pug": "2.0.0-rc.4"
+  },
+  "devDependencies": {
+    "nodemon": "1.12.7"
+  }
+}
