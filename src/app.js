@@ -29,7 +29,7 @@ app
 // Routes
 
 app.use("/", (req, res, next) => {
-  res.send("Ok");
+  res.render("home", { title: "Home" });
 });
 
 module.exports = app;
