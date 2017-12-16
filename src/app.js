@@ -8,8 +8,6 @@ const app = express();
 
 dotenv.load();
 
-const isDev = process.env.NODE_ENV !== "production";
-
 // Configuration
 
 app
