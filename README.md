@@ -1,3 +1,3 @@
-# Basics
+# Styleguide
 
-Nothing but the basics Express starter.
+A styleguide shell.
