@@ -1,0 +1,11 @@
+#site-container {
+  display: grid;
+  grid-template-rows: 60px auto;
+  height: 100%;
+}
+
+#page-container {
+  height: 100%;
+  padding: 1rem;
+  background-color: map-get($colors-gray, 200);
+}

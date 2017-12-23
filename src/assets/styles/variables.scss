@@ -1,0 +1,42 @@
+/**
+ *
+ * Variables
+ *
+*/
+
+// Fonts
+
+$font-roboto: "Roboto", Helvetica, sans-serif;
+
+// Colors
+
+$color-black: #000000;
+$color-white: #FFFFFF;
+
+$colors-brand: (
+  primary: red,
+  secondary: yellow,
+  accent: green,
+  warning: red
+);
+
+$colors-gray: (
+  100: #333333,
+  200: #575757,
+  250: #696969,
+  300: #808080,
+  400: #b3b3b3,
+  500: #c4c4c4,
+  600: #e8e8e8
+);
+
+// Elements
+
+$header-height: 60px;
+$container-width: 1080px;
+
+// Responsive
+
+$sm: 32rem;
+$md: 48rem;
+$lg: 60rem;
