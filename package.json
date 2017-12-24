@@ -5,10 +5,11 @@
   "main": "server.js",
   "scripts": {
     "build": "NODE_ENV=production webpack",
-    "lint": "eslint ./**/*.js",
-    "start": "",
-    "server:dev": "nodemon server.js",
     "client:dev": "webpack --watch",
+    "lint": "eslint ./**/*.js",
+    "server:dev": "nodemon server.js",
+    "start": "node server.js",
+    "start:dev": "yarn server:dev & yarn client:dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Grant J. Schulte <schulte.grant@gmail.com>",
@@ -36,6 +37,7 @@
     "mongoose": "4.13.7",
     "morgan": "1.9.0",
     "node-sass": "4.7.2",
+    "pm2": "2.9.1",
     "postcss-clean": "1.1.0",
     "postcss-loader": "2.0.9",
     "pug": "2.0.0-rc.4",
@@ -43,9 +45,11 @@
     "style-loader": "0.19.1",
     "uglifyjs-webpack-plugin": "1.1.4",
     "url-loader": "0.6.2",
-    "webpack": "3.10.0"
+    "webpack": "3.10.0",
+    "webpack-merge": "4.1.1"
   },
   "devDependencies": {
+    "eslint-loader": "1.9.0",
     "nodemon": "1.12.7",
     "webpack-dev-server": "2.9.7"
   }

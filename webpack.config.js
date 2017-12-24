@@ -1,6 +1,6 @@
 const path = require("path");
 const webpack = require("webpack");
-const { dirs } = require("./src/config");
+const merge = require("webpack-merge");
 const dotenv = require("dotenv-webpack");
 
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
@@ -8,8 +8,16 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 const UglifyWebpackPlugin = require("uglifyjs-webpack-plugin");
 const ImageminPlugin = require("imagemin-webpack-plugin").default;
 
+const { dirs } = require("./src/config");
+
 module.exports = (env) => {
-  return {
+  const target = process.env.npm_lifecycle_event;
+
+  console.log("TARGET", target);
+
+  // Common Configuration
+
+  const common = {
     entry: {
       "app": [
         path.join(dirs.src.assets, "scripts", "index.js")
@@ -97,17 +105,42 @@ module.exports = (env) => {
           to: `${dirs.public}/fonts`,
           flatten: true
         }
-      ]),
-      new UglifyWebpackPlugin(),
-      new ImageminPlugin({
-        test: /\.(jpe?g|png|gif|svg)$/i
-      })
-    ],
-
-    devtool: "source-map",
-
-    stats: {
-      colors: true
-    }
+      ])
+    ]
   };
+
+  // Development Configuration
+
+  if (target === "start:dev" || target === "client:dev") {
+    return merge(common, {
+      devtool: "source-map",
+
+      module: {
+        rules: [
+          {
+            test: /\.js$/,
+            exclude: /node_modules/,
+            loader: "eslint-loader"
+          }
+        ]
+      },
+
+      stats: {
+        colors: true
+      }
+    });
+  }
+
+  // Production Configuration
+
+  if (target === "build") {
+    return merge(common, {
+      plugins: [
+        new UglifyWebpackPlugin(),
+        new ImageminPlugin({
+          test: /\.(jpe?g|png|gif|svg)$/i
+        })
+      ]
+    });
+  }
 };

@@ -29,5 +29,6 @@
     "sourceType": "module"
   },
   "globals": {
+    "document": true
   }
 }
