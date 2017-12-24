@@ -4,7 +4,8 @@
   "description": "A styleguide shell.",
   "main": "server.js",
   "scripts": {
-    "build": "NODE_ENV=production webpack",
+    "build": "yarn clean && NODE_ENV=production webpack",
+    "clean": "rm -rf ./public",
     "client:dev": "webpack --watch",
     "lint": "eslint ./**/*.js",
     "server:dev": "nodemon server.js",
