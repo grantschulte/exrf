@@ -38,6 +38,9 @@ app
   .use("/:page", isPage(), (req, res, next) => {
     res.render(req.page.slug);
   })
+  .use("/", (req, res, next) => {
+    res.redirect(pages[0].path);
+  })
   .use("*", (req, res) => {
     res
       .status(404)

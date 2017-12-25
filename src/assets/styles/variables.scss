@@ -2,32 +2,36 @@
  *
  * Variables
  *
-*/
+ */
 
 // Fonts
 
 $font-roboto: "Roboto", Helvetica, sans-serif;
+$font-roboto-condensed: "Roboto Condensed", Helvetica, sans-serif;
 
 // Colors
+
+$colors-brand: (
+  red: #BA1214,
+  black: #071108,
+  gray: #333232,
+  grayBlue: #161F22,
+  grayLight: #BA1214
+);
 
 $color-black: #000000;
 $color-white: #FFFFFF;
 
-$colors-brand: (
-  primary: red,
-  secondary: yellow,
-  accent: green,
-  warning: red
-);
-
 $colors-gray: (
-  100: #333333,
-  200: #575757,
-  250: #696969,
-  300: #808080,
-  400: #b3b3b3,
-  500: #c4c4c4,
-  600: #e8e8e8
+  100: #111111,
+  200: #222222,
+  300: #333333,
+  400: #444444,
+  500: #555555,
+  600: #666666,
+  700: #777777,
+  800: #888888,
+  900: #999999
 );
 
 // Elements
@@ -35,8 +39,11 @@ $colors-gray: (
 $header-height: 60px;
 $container-width: 1080px;
 
-// Responsive
+// Breakpoints
 
-$sm: 32rem;
-$md: 48rem;
-$lg: 60rem;
+$xs: 320px;
+$sm: 480px;
+$md: 768px;
+$lg: 1200px;
+$xl: 1440px;
+$xxl: 1660px;

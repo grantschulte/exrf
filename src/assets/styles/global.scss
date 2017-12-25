@@ -12,6 +12,7 @@ body {
   font-size: 14px;
   font-family: $font-roboto;
   height: 100%;
+  background-color: map-get($colors-brand, grayBlue);
 }
 
 a {
@@ -21,7 +22,7 @@ a {
   transition: 200ms color ease-in-out;
 
   &:hover {
-    color: map-get($colors-brand, primary);
+    color: map-get($colors-brand, red);
   }
 }
 

@@ -1,29 +1,39 @@
 #menu {
-  background-color: map-get($colors-gray, 100);
   color: $color-white;
-  padding: 0;
-  margin: 0;
-  height: 100%;
-  display: flex;
 
   ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
-    align-items: center;
 
     li {
       display: flex;
-      align-items: center;
-      padding: 0 1rem;
-      height: 100%;
-      border-bottom: 2px solid map-get($colors-gray, 100);
-      transition: 200ms all ease-in-out;
+      flex-direction: column;
+    }
+  }
 
-      &.active {
-        border-bottom: 2px solid map-get($colors-brand, primary);
+  a {
+    display: flex;
+    align-items: center;
+    padding: 1.25em;
+    font-family: $font-roboto-condensed;
+    font-weight: 500;
+    font-size: em(15px);
+    text-transform: uppercase;
+    transition: 200ms all ease-in-out;
+    // border-bottom: 1px solid map-get($colors-brand, black);
+
+    &.active {
+      background-color: map-get($colors-brand, red);
+
+      &:hover {
+        background-color: map-get($colors-brand, red);
       }
+    }
+
+    &:hover {
+      color: $color-white;
+      background-color: darken(map-get($colors-brand, black), 5%);
     }
   }
 }
