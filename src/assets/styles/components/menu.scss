@@ -15,25 +15,19 @@
   a {
     display: flex;
     align-items: center;
-    padding: 1.25em;
+    padding: 1em 1.25em;
     font-family: $font-roboto-condensed;
     font-weight: 500;
-    font-size: em(15px);
+    font-size: em(14px);
     text-transform: uppercase;
-    transition: 200ms all ease-in-out;
-    // border-bottom: 1px solid map-get($colors-brand, black);
 
     &.active {
-      background-color: map-get($colors-brand, red);
-
-      &:hover {
-        background-color: map-get($colors-brand, red);
-      }
+      border-left: 3px solid map-get($colors-brand, red);
     }
 
     &:hover {
       color: $color-white;
-      background-color: darken(map-get($colors-brand, black), 5%);
+      border-left: 3px solid map-get($colors-brand, red);
     }
   }
 }

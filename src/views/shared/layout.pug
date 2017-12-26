@@ -2,8 +2,9 @@ html
   head
     title Shudder Styleguide - #{currentPage.name}
     block styles
-      link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto:400,500,700")
-      link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700")
+      link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+      link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700")
+      link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700")
       link(rel="stylesheet", href="/styles/app.css")
   body
     div#site-container        
@@ -14,7 +15,9 @@ html
               img(src="/images/shudder.png")
             include menu
         div#page-container
-          block page
+          div#page
+            block page
           
     block scripts
+      //- <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
       script(src="/scripts/app.js")

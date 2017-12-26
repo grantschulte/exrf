@@ -1,4 +1,21 @@
-extends shared/layout
+extends shared/page
 
-block page
+block left
   h1 Colors
+  p This is the colors page.
+  
+block right
+  div(class="code-example")
+    h5 HTML
+    pre(class="prettyprint language-html")
+      code(class="language-html").
+        &lt;h1&gt;&lt;/h1&gt;
+  
+  div(class="code-example")
+    h5 CSS
+    pre(class="prettyprint language-js")
+      code(class="language-js").
+        function hello() {
+          console.log("hello")
+        }
+        

@@ -2,5 +2,5 @@ nav#menu
   ul
     each page in pages
       li(class=`menu-link-${page.slug}`)
-        a(class=`${isActive(page)}`, href=page.path)= page.name
+        a(class={ active: isActive(page) }, href=page.path)= page.name
       

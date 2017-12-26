@@ -1,13 +1,12 @@
 #sidebar {
-  background-color: darken(map-get($colors-brand, grayBlue), 5%);
 
   #logo {
     display: block;
     padding: 1.25em;
-    // border-bottom: 1px solid map-get($colors-brand, grayBlue);
 
     img {
       max-width: 120px;
+      margin-left: -3px;
     }
   }
 }

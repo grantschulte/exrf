@@ -3,7 +3,7 @@ const app = require("../app");
 
 module.exports = () => {
   return (req, res, next) => {
-    const found = pages.find(p => p.slug === req.params.page);
+    let found = pages.find(p => p.slug === req.params.page);
 
     if (!found) {
       res.locals.currentPage = {
@@ -18,11 +18,10 @@ module.exports = () => {
     }
 
     req.page = found;
-    res.locals.currentPage = found;
+    res.locals.currentPage = found || {};
     res.locals.isActive = (page) => {
-      return page.slug === found.slug
-        ? " active"
-        : "";
+      found = found || {};
+      return page.slug === found.slug;
     };
 
     next();
