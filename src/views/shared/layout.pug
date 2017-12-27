@@ -15,7 +15,7 @@ html
               img(src="/images/shudder.png")
             include menu
         div#page-container
-          div#page
+          div(id="page", class=`page-${currentPage.class}`)
             block page
           
     block scripts

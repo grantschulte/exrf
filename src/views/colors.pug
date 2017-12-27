@@ -1,19 +1,4 @@
 extends shared/page
-include ./mixins/code-example.pug
+include ./mixins/code-example
 
-block left
-  h1 Colors
-  p This is the colors page.
-  
-block right
-  +example("html")
-    pre(class="prettyprint language-html")
-      code(class="language-html").
-        &lt;h1&gt;&lt;/h1&gt;
-  
-  +example("css")
-    pre(class="prettyprint language-js")
-      code(class="language-js").
-        function hello() {
-          console.log("hello")
-        }
+block content

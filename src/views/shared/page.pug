@@ -1,9 +1,6 @@
 extends ./layout
+include ../mixins/page-title
 
 block page
-  div(class="left")
-    block left
-    
-  div(class="right")
-    block right
-    
+  +page-title(currentPage.name)
+  block content

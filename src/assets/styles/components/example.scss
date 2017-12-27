@@ -1,7 +1,22 @@
 .code-example {
-  margin-bottom: 2rem;
+  border: 1px solid map-get($colors-brand, grayBlue);
 
   &__title {
     text-transform: uppercase;
+    padding: 1em;
+    margin: 0;
+    background-color: map-get($colors-brand, grayBlue);
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  pre {
+    margin: 0;
+    padding: 1em 2em;
+    white-space: pre-wrap;
+    font-size: em(14px);
+    color: map-get($colors-brand, grayLight);
   }
 }

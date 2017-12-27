@@ -1,4 +1,73 @@
 extends shared/page
+include ./mixins/code-example
 
-block left
-  h1 Typography
+block content
+  div(class="row")
+    div(class="col col-2")
+      h1 Heading 1
+      h2 Heading 2
+      h3 Heading 3
+      h4 Heading 4
+      h5 Heading 5
+      h6 Heading 6
+      
+    div(class="col col-2")
+      div(class="examples")
+        +example("html")
+          pre(class="prettyprint language-html")
+            code(class="language-html").
+              &lt;h1&gt;&lt;/h1&gt;
+        
+        +example("css")
+          pre(class="prettyprint language-js")
+            code(class="language-js").
+              function hello() {
+                console.log("hello")
+              }
+      
+    
+  div(class="row")
+    div(class="col col-2")
+      h1.uppercase Heading 1
+      h2.uppercase Heading 2
+      h3.uppercase Heading 3
+      h4.uppercase Heading 4
+      h5.uppercase Heading 5
+      h6.uppercase Heading 6
+      
+    div(class="col col-2")
+      div(class="examples")
+        +example("html")
+          pre(class="prettyprint language-html")
+            code(class="language-html").
+              &lt;h1&gt;&lt;/h1&gt;
+        
+        +example("css")
+          pre(class="prettyprint language-js")
+            code(class="language-js").
+              function hello() {
+                console.log("hello")
+              }
+    
+  div(class="row")
+    div(class="col col-2")
+      h1.normal Heading 1
+      h2.normal Heading 2
+      h3.normal Heading 3
+      h4.normal Heading 4
+      h5.normal Heading 5
+      h6.normal Heading 6
+    
+    div(class="col col-2")
+      div(class="examples")
+        +example("html")
+          pre(class="prettyprint language-html")
+            code(class="language-html").
+              &lt;h1&gt;&lt;/h1&gt;
+        
+        +example("css")
+          pre(class="prettyprint language-js")
+            code(class="language-js").
+              function hello() {
+                console.log("hello")
+              }

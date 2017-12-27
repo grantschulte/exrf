@@ -7,7 +7,8 @@ module.exports = () => {
 
     if (!found) {
       res.locals.currentPage = {
-        name: "Not Found"
+        name: "Not Found",
+        class: "not-found"
       };
 
       res
