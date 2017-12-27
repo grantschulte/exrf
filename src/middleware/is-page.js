@@ -5,10 +5,15 @@ module.exports = () => {
   return (req, res, next) => {
     let found = pages.find(p => p.slug === req.params.page);
 
+    res.locals.isActive = (page) => {
+      found = found || {};
+      return page.slug === found.slug;
+    };
+
     if (!found) {
       res.locals.currentPage = {
         name: "Not Found",
-        class: "not-found"
+        slug: "not-found"
       };
 
       res
@@ -20,10 +25,6 @@ module.exports = () => {
 
     req.page = found;
     res.locals.currentPage = found || {};
-    res.locals.isActive = (page) => {
-      found = found || {};
-      return page.slug === found.slug;
-    };
 
     next();
   };

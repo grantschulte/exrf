@@ -1,21 +1,26 @@
 html
   head
     title Shudder Styleguide - #{currentPage.name}
+    meta(name="viewport", content="width=device-width, initial-scale=1")
     block styles
       link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
       link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700")
       link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700")
       link(rel="stylesheet", href="/styles/app.css")
   body
-    div#site-container        
+    div#site-container   
       div#main-container
-        block sidebar
-          div#sidebar
-            a(id="logo", href="/")
-              img(src="/images/shudder.png")
-            include menu
+        block header
+          div#header
+            div(id="logo")
+              a(href="/")
+                img(src="/images/shudder.png")
+            div(id="menu-icon")
+              span(class="material-icons") menu
+            block menu
+              include menu
         div#page-container
-          div(id="page", class=`page-${currentPage.class}`)
+          div(id="page", class=`page-${currentPage.slug}`)
             block page
           
     block scripts

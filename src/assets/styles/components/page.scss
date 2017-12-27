@@ -1,6 +1,6 @@
 #page {
   background-color: darken(map-get($colors-brand, grayBlue), 2.5%);
-  min-height: 100%;
+  flex: 1;
 
   .row {
     margin: 1em 0;
@@ -10,6 +10,12 @@
 
     @media screen and (max-width: $lg) {
       flex-direction: column;
+    }
+
+    &:last-child {
+      .col {
+        border-bottom: 0;
+      }
     }
   }
 
@@ -35,13 +41,13 @@
     }
   }
 
-  &.page-not-found {
-    background-color: transparent;
-
-    .page-title {
-      background-color: transparent;
-    }
-  }
+  // &.page-not-found {
+  //   background-color: transparent;
+  //
+  //   .page-title {
+  //     background-color: transparent;
+  //   }
+  // }
 
   @media screen and (max-width: $lg) {
     .examples {

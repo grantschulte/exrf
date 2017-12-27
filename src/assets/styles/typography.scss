@@ -13,12 +13,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .page-title {
-  padding: 4em 2em 2em 2em;
+  padding: 4.5em 2em 2em 2em;
   background-color: darken(map-get($colors-brand, grayBlue), 2.5%);
 
   h1 {
     margin-bottom: 0;
     padding-bottom: 1em;
     border-bottom: 3px solid #ba1214;
+  }
+
+  @media screen and (max-width: $md) {
+    padding: 2em;
   }
 }
