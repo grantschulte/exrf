@@ -1,11 +1,13 @@
 const menu = document.getElementById("menu");
 const trigger = document.getElementById("menu-icon");
 const close = document.getElementById("close");
+const body = document.body;
 
 function init() {
   if (menu && trigger) {
     trigger.addEventListener("click", () => {
-      menu.classList.toggle("on");
+      body.classList.add("menu-on");
+      menu.classList.add("on");
     });
   }
 
@@ -24,6 +26,7 @@ function init() {
 
 function closeMenu() {
   if (menu) {
+    body.classList.remove("menu-on");
     menu.classList.remove("on");
   }
 }

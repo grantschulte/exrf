@@ -13,6 +13,10 @@ body {
   font-family: $font-roboto;
   height: 100%;
   background-color: darken(map-get($colors-brand, grayBlue), 5%);
+
+  &.menu-on {
+    overflow: hidden;
+  }
 }
 
 p {

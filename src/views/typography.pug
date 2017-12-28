@@ -37,7 +37,12 @@ block content
         +example("html")
           pre(class="language-html")
             code(class="language-html").
-              &lt;h1&gt;&lt;/h1&gt;
+              &lt;h1 class="uppercase"&gt;Heading 1&lt;/h1&gt;
+              &lt;h2 class="uppercase"&gt;Heading 2&lt;/h2&gt;
+              &lt;h3 class="uppercase"&gt;Heading 3&lt;/h3&gt;
+              &lt;h4 class="uppercase"&gt;Heading 4&lt;/h4&gt;
+              &lt;h5 class="uppercase"&gt;Heading 5&lt;/h5&gt;
+              &lt;h6 class="uppercase"&gt;Heading 6&lt;/h6&gt;
         
         +example("css")
           pre(class="language-css")
@@ -60,14 +65,16 @@ block content
         +example("html")
           pre(class="language-html")
             code(class="language-html").
-              &lt;h1&gt;Text&lt;/h1&gt;
+              &lt;h1 class="normal"&gt;Heading 1&lt;/h1&gt;
+              &lt;h2 class="normal"&gt;Heading 2&lt;/h2&gt;
+              &lt;h3 class="normal"&gt;Heading 3&lt;/h3&gt;
+              &lt;h4 class="normal"&gt;Heading 4&lt;/h4&gt;
+              &lt;h5 class="normal"&gt;Heading 5&lt;/h5&gt;
+              &lt;h6 class="normal"&gt;Heading 6&lt;/h6&gt;
         
-        +example("js")
-          pre(class="language-js")
-            code(class="language-js").
-              const c = new Component();
-              const x = {};
-              
-              function example() {
-                console.log("example");
+        +example("css")
+          pre(class="language-css")
+            code(class="language-css").
+              .normal {
+                font-weight: 400;
               }
