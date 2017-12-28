@@ -4,6 +4,7 @@
 
 html {
   height: 100%;
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
@@ -12,7 +13,7 @@ body {
   font-size: 16px;
   font-family: $font-roboto;
   height: 100%;
-  background-color: darken(map-get($colors-brand, grayBlue), 5%);
+  background-color: darken(map-get($colors-brand, blackAlt), 2.5%);
 
   &.menu-on {
     overflow: hidden;
@@ -20,12 +21,17 @@ body {
 }
 
 p {
-  color: map-get($colors-brand, grayLight);
-  font-weight: 300;
+  color: $white;
+  font-size: em(14px);
+  line-height: 1.25;
+
+  &.small {
+    font-size: em(12px);
+  }
 }
 
 a {
-  color: $color-white;
+  color: $white;
   text-transform: none;
   text-decoration: none;
   transition: 200ms color ease-in-out;

@@ -2,7 +2,7 @@
 
 code[class*="language-"],
 pre[class*="language-"] {
-	color: $color-white;
+	color: $white;
 	background: none;
 	text-shadow: none;
 	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
@@ -59,7 +59,7 @@ pre[class*="language-"] {
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-	background-color: darken(map-get($colors-brand, grayBlue), 2.5%);
+	background-color: darken(map-get($colors-brand, gray), 2.5%);
 }
 
 /* Inline code */
@@ -91,7 +91,7 @@ pre[class*="language-"] {
 .token.constant,
 .token.symbol,
 .token.deleted {
-	color: lighten(map-get($colors-brand, grayBlue), 50%);
+	color: lighten(map-get($colors-brand, gray), 50%);
 }
 
 .token.selector,
@@ -114,7 +114,7 @@ pre[class*="language-"] {
 .token.atrule,
 .token.attr-value,
 .token.keyword {
-	color: lighten(map-get($colors-brand, grayBlue), 50%);
+	color: lighten(map-get($colors-brand, gray), 50%);
 }
 
 .token.function {
@@ -124,7 +124,7 @@ pre[class*="language-"] {
 .token.regex,
 .token.important,
 .token.variable {
-	color: map-get($colors-brand, grayBlue);
+	color: map-get($colors-brand, gray);
 }
 
 .token.important,

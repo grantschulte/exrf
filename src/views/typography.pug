@@ -4,77 +4,44 @@ include ./mixins/code-example
 block content
   div(class="row")
     div(class="col col-2")
-      h1 Heading 1
-      h2 Heading 2
-      h3 Heading 3
-      h4 Heading 4
-      h5 Heading 5
-      h6 Heading 6
+      h1(class="headline heavy") Large Headline
       
     div(class="col col-2")
       div(class="examples")
         +example("html")
           pre(class="language-html")
             code(class="language-html").
-              &lt;h1&gt;Heading 1&lt;/h1&gt;
-              &lt;h2&gt;Heading 2&lt;/h2&gt;
-              &lt;h3&gt;Heading 3&lt;/h3&gt;
-              &lt;h4&gt;Heading 4&lt;/h4&gt;
-              &lt;h5&gt;Heading 5&lt;/h5&gt;
-              &lt;h6&gt;Heading 6&lt;/h6&gt;
-    
+              &lt;h1 class="headline heavy"&gt;Headline&lt;/h1&gt;
+              
   div(class="row")
     div(class="col col-2")
-      h1.uppercase Heading 1
-      h2.uppercase Heading 2
-      h3.uppercase Heading 3
-      h4.uppercase Heading 4
-      h5.uppercase Heading 5
-      h6.uppercase Heading 6
+      h4(class="headline uppercase heavy") Small Headline
       
     div(class="col col-2")
       div(class="examples")
         +example("html")
           pre(class="language-html")
             code(class="language-html").
-              &lt;h1 class="uppercase"&gt;Heading 1&lt;/h1&gt;
-              &lt;h2 class="uppercase"&gt;Heading 2&lt;/h2&gt;
-              &lt;h3 class="uppercase"&gt;Heading 3&lt;/h3&gt;
-              &lt;h4 class="uppercase"&gt;Heading 4&lt;/h4&gt;
-              &lt;h5 class="uppercase"&gt;Heading 5&lt;/h5&gt;
-              &lt;h6 class="uppercase"&gt;Heading 6&lt;/h6&gt;
-        
-        +example("css")
-          pre(class="language-css")
-            code(class="language-css").
-              .uppercase {
-                text-transform: uppercase;
-              }
-    
+              &lt;h4 class="headline uppercase heavy"&gt;Headline&lt;/h4&gt;
+              
   div(class="row")
     div(class="col col-2")
-      h1.normal Heading 1
-      h2.normal Heading 2
-      h3.normal Heading 3
-      h4.normal Heading 4
-      h5.normal Heading 5
-      h6.normal Heading 6
-    
+      p Body copy
+      
     div(class="col col-2")
       div(class="examples")
         +example("html")
           pre(class="language-html")
             code(class="language-html").
-              &lt;h1 class="normal"&gt;Heading 1&lt;/h1&gt;
-              &lt;h2 class="normal"&gt;Heading 2&lt;/h2&gt;
-              &lt;h3 class="normal"&gt;Heading 3&lt;/h3&gt;
-              &lt;h4 class="normal"&gt;Heading 4&lt;/h4&gt;
-              &lt;h5 class="normal"&gt;Heading 5&lt;/h5&gt;
-              &lt;h6 class="normal"&gt;Heading 6&lt;/h6&gt;
-        
-        +example("css")
-          pre(class="language-css")
-            code(class="language-css").
-              .normal {
-                font-weight: 400;
-              }
+              &lt;p&gt;Body copy&lt;/p&gt;
+              
+  div(class="row")
+    div(class="col col-2")
+      p(class="small") Small text
+      
+    div(class="col col-2")
+      div(class="examples")
+        +example("html")
+          pre(class="language-html")
+            code(class="language-html").
+              &lt;p class="small"&gt;Small text&lt;/p&gt;

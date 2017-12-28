@@ -1,5 +1,10 @@
 const pages = [
   {
+    name: "Overview",
+    path: "/overview",
+    slug: "overview"
+  },
+  {
     name: "Colors",
     path: "/colors",
     slug: "colors"
@@ -20,14 +25,19 @@ const pages = [
     slug: "form-elements"
   },
   {
-    name: "Poster Cards",
-    path: "/poster-cards",
-    slug: "poster-cards"
+    name: "Cards",
+    path: "/cards",
+    slug: "cards"
   },
   {
-    name: "Title Cards",
-    path: "/title-cards",
-    slug: "title-cards"
+    name: "Logo",
+    path: "/logo",
+    slug: "logo"
+  },
+  {
+    name: "Helpers",
+    path: "/helpers",
+    slug: "helpers"
   }
 ];
 

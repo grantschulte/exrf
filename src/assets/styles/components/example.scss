@@ -1,12 +1,12 @@
 .code-example {
-  border: 1px solid map-get($colors-brand, grayBlue);
+  border: 1px solid map-get($colors-brand, blackAlt);
   margin-bottom: 2em;
 
   &__title {
     text-transform: uppercase;
     padding: 1em;
     margin: 0;
-    background-color: map-get($colors-brand, grayBlue);
+    background-color: map-get($colors-brand, blackAlt);
   }
 
   &:last-child {
@@ -20,6 +20,6 @@
     white-space: pre-wrap;
     font-size: em(14px);
     color: map-get($colors-brand, grayLight);
-    background-color: darken(map-get($colors-brand, grayBlue), 2.5%);
+    background-color: darken(map-get($colors-brand, blackAlt), 2.5%);
   }
 }

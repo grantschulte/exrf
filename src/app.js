@@ -39,7 +39,7 @@ app
     res.render(req.page.slug);
   })
   .use("/", (req, res, next) => {
-    res.redirect(pages[0].path);
+    res.redirect("/overview");
   })
   .use("*", (req, res) => {
     res
