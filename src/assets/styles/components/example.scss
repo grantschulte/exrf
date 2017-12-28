@@ -1,5 +1,6 @@
 .code-example {
   border: 1px solid map-get($colors-brand, grayBlue);
+  margin-bottom: 2em;
 
   &__title {
     text-transform: uppercase;
@@ -13,10 +14,12 @@
   }
 
   pre {
+    border: none;
     margin: 0;
     padding: 1em 2em;
     white-space: pre-wrap;
     font-size: em(14px);
     color: map-get($colors-brand, grayLight);
+    background-color: darken(map-get($colors-brand, grayBlue), 2.5%);
   }
 }

@@ -1,3 +1,4 @@
 node_modules
 test
 public
+src/assets/scripts/prism.js

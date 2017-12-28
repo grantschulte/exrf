@@ -35,9 +35,14 @@
     color: $color-white;
     align-items: center;
     justify-content: flex-end;
+    cursor: pointer;
 
     .material-icons {
       font-size: em(28px);
+    }
+
+    &:hover {
+      color: lighten(map-get($colors-brand, gray), 50%);
     }
 
     @media screen and (max-width: $md) {

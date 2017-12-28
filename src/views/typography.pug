@@ -14,17 +14,14 @@ block content
     div(class="col col-2")
       div(class="examples")
         +example("html")
-          pre(class="prettyprint language-html")
+          pre(class="language-html")
             code(class="language-html").
-              &lt;h1&gt;&lt;/h1&gt;
-        
-        +example("css")
-          pre(class="prettyprint language-js")
-            code(class="language-js").
-              function hello() {
-                console.log("hello")
-              }
-      
+              &lt;h1&gt;Heading 1&lt;/h1&gt;
+              &lt;h2&gt;Heading 2&lt;/h2&gt;
+              &lt;h3&gt;Heading 3&lt;/h3&gt;
+              &lt;h4&gt;Heading 4&lt;/h4&gt;
+              &lt;h5&gt;Heading 5&lt;/h5&gt;
+              &lt;h6&gt;Heading 6&lt;/h6&gt;
     
   div(class="row")
     div(class="col col-2")
@@ -38,15 +35,15 @@ block content
     div(class="col col-2")
       div(class="examples")
         +example("html")
-          pre(class="prettyprint language-html")
+          pre(class="language-html")
             code(class="language-html").
               &lt;h1&gt;&lt;/h1&gt;
         
         +example("css")
-          pre(class="prettyprint language-js")
-            code(class="language-js").
-              function hello() {
-                console.log("hello")
+          pre(class="language-css")
+            code(class="language-css").
+              .uppercase {
+                text-transform: uppercase;
               }
     
   div(class="row")
@@ -61,13 +58,16 @@ block content
     div(class="col col-2")
       div(class="examples")
         +example("html")
-          pre(class="prettyprint language-html")
+          pre(class="language-html")
             code(class="language-html").
-              &lt;h1&gt;&lt;/h1&gt;
+              &lt;h1&gt;Text&lt;/h1&gt;
         
-        +example("css")
-          pre(class="prettyprint language-js")
+        +example("js")
+          pre(class="language-js")
             code(class="language-js").
-              function hello() {
-                console.log("hello")
+              const c = new Component();
+              const x = {};
+              
+              function example() {
+                console.log("example");
               }
