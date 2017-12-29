@@ -9,10 +9,6 @@
     background-color: map-get($colors-brand, blackAlt);
   }
 
-  &:last-child {
-    margin-bottom: 0;
-  }
-
   pre {
     border: none;
     margin: 0;

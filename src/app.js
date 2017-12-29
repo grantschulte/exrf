@@ -20,7 +20,8 @@ app
   .set("json spaces", 2);
 
 app.locals = {
-  pages
+  pages,
+  version: require("../package.json").version
 };
 
 // Middleware

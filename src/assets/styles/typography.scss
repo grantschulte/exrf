@@ -34,17 +34,3 @@ h4 {
     letter-spacing: 1.5px;
   }
 }
-
-.page-title {
-  padding: 4.5em 2em 2em 2em;
-
-  h1 {
-    margin-bottom: 0;
-    padding-bottom: 1em;
-    border-bottom: 3px solid #ba1214;
-  }
-
-  @media screen and (max-width: $md) {
-    padding: 2em;
-  }
-}

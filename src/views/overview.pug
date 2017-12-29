@@ -1,3 +1,26 @@
 extends shared/page
 
 block content
+  div.row
+    div.col
+      h4(class="headline uppercase") Version
+      p= version
+  
+  div.row
+    div.col
+      h4(class="headline uppercase") Purpose
+      p.
+        This styleguide is the definitive source of knowledge about our
+        user interface implementation. It is a living user interface element
+        reference that can also act as a playground for alterations and
+        new components.
+        
+  div.row
+    div.col
+      h4(class="headline uppercase") Maintenance
+      p.
+        The styleguide should be maintained and updated alongside the
+        components and styles that live within the application. If an update
+        is made in the main application, then this guide must be updated
+        here and visa versa.
+        
