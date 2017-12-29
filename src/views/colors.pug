@@ -1,3 +1,115 @@
 extends shared/page
+include mixins/code-example
 
 block content
+  div(class="row")
+    div(class="col")
+      h4(id="color-use") Using Colors
+      p.
+        Color values should be obtained from the 
+        #[span(class="inline-code") $colors-brand] SCSS map. This
+        ensures that we only use valid colors and that we don't end up with
+        repetetive definitions or worse—the wrong colors.
+      
+  div(class="color-grid row")
+    div(class="color-grid__item")
+      div(class="color-box bg--red") Shudder Red
+      div(class="color-box bg--red--l1")
+      div(class="color-box bg--red--l2")
+      div(class="color-box bg--red--l3")
+        
+    div(class="color-grid__item")
+      +example("scss")
+        pre(class="language-scss")
+          code(class="language-scss").
+            .bg--red {
+              background-color: map-get($colors-brand, red);
+            }
+            
+            .color--red {
+              color: map-get($colors-brand, red);
+            }
+      
+  div(class="color-grid row")
+    div(class="color-grid__item")
+      div(class="color-box bg--gray") Light Steel Gray
+      div(class="color-box bg--gray--l1")
+      div(class="color-box bg--gray--l2")
+      div(class="color-box bg--gray--l3")
+        
+    div(class="color-grid__item")
+      +example("scss")
+        pre(class="language-scss")
+          code(class="language-scss").
+            .bg--gray {
+              background-color: map-get($colors-brand, gray);
+            }
+            
+            .color--gray {
+              color: map-get($colors-brand, gray);
+            }
+            
+  div(class="color-grid row")
+    div(class="color-grid__item")
+      div(class="color-box bg--gray-light") Steel Gray
+      div(class="color-box bg--gray-light--l1")
+      div(class="color-box bg--gray-light--l2")
+      div(class="color-box bg--gray-light--l3")
+        
+    div(class="color-grid__item")
+      +example("scss")
+        pre(class="language-scss")
+          code(class="language-scss").
+            .bg--gray-light {
+              background-color: map-get($colors-brand, gray-light);
+            }
+            
+            .color--gray-light {
+              color: map-get($colors-brand, gray-light);
+            }
+            
+  div(class="color-grid row")
+    div(class="color-grid__item")
+      div(class="color-box bg--black-alt") Rich Black
+      div(class="color-box bg--black-alt--l1")
+      div(class="color-box bg--black-alt--l2")
+      div(class="color-box bg--black-alt--l3")
+        
+    div(class="color-grid__item")
+      +example("scss")
+        pre(class="language-scss")
+          code(class="language-scss").
+            .bg--black-alt {
+              background-color: map-get($colors-brand, black-alt);
+            }
+            
+            .color--red {
+              color: map-get($colors-brand, black-alt);
+            }
+            
+  div(class="color-grid row")
+    div(class="color-grid__item")
+      div(class="color-box bg--black") Black
+      div(class="color-box bg--black")
+      div(class="color-box bg--black")
+      div(class="color-box bg--black")
+        
+    div(class="color-grid__item")
+      +example("scss")
+        pre(class="language-scss")
+          code(class="language-scss").
+            .bg--black {
+              background-color: map-get($colors-brand, black);
+            }
+            
+            .color--black {
+              color: map-get($colors-brand, black);
+            }
+
+  div(class="row")
+    div(class="col")
+      h4(id="rollovers-states-color-grades") Rollovers, states, and color grades
+      p.
+        Rollover states should be achieved by using SCSS's built in 
+        #[span(class="inline-code") darken()]
+        and #[span(class="inline-code") lighten()] functions.

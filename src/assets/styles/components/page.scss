@@ -23,7 +23,7 @@
   }
 
   .col {
-    border-bottom: 2px solid map-get($colors-brand, blackAlt);
+    border-bottom: 2px solid map-get($colors-brand, black-alt);
     flex: 1;
 
     @media screen and (max-width: $lg) {

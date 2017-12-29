@@ -1,0 +1,32 @@
+#page.page-colors {
+  .color-grid {
+    display: grid;
+    grid-template-columns: repeat(2, calc(50% - 1em));
+    grid-auto-rows: 1fr;
+    grid-gap: 2em;
+
+    &__item {
+      display: flex;
+      flex-flow: column;
+      height: 100%;
+
+      .code-example:only-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .color-box {
+      display: flex;
+      width: 100%;
+      flex: 1;
+      color: $white;
+      align-items: center;
+      padding: 0 1em;
+      font-weight: bold;
+    }
+
+    @media screen and (max-width: $lg) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

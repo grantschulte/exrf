@@ -1,0 +1,35 @@
+@each $name, $value in $colors-brand {
+  .color--#{$name} {
+    color: $value;
+  }
+
+  .bg--#{$name} {
+    background-color: $value;
+  }
+
+  @for $i from 1 to 4 {
+    $percent: 10 * $i;
+
+    .color--#{$name}--d#{$i} {
+      color: darken($value, $percent);
+    }
+
+    .color--#{$name}--l#{$i} {
+      color: lighten($value, $percent);
+    }
+
+    .bg--#{$name}--d#{$i} {
+      background-color: darken($value, $percent);
+    }
+
+    .bg--#{$name}--l#{$i} {
+      background-color: lighten($value, $percent);
+    }
+  }
+}
+
+.inline-code {
+  font-size: 0.875em;
+  padding: 4px;
+  background-color: lighten(map-get($colors-brand, black-alt), 5%);
+}

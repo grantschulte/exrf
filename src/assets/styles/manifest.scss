@@ -3,6 +3,7 @@
 @import "global";
 @import "containers";
 @import "typography";
+@import "helpers";
 
 @import "components/header";
 @import "components/menu";
@@ -10,3 +11,4 @@
 @import "components/example";
 
 @import "pages/overview";
+@import "pages/colors";

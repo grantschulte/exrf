@@ -3,7 +3,7 @@
   flex-flow: column;
   padding: 2rem;
   grid-area: 1 / 1 / 3 / 2;
-  background-color: map-get($colors-brand, blackAlt);
+  background-color: map-get($colors-brand, black-alt);
 
   #logo {
     display: flex;
