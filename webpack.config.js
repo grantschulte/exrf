@@ -30,30 +30,6 @@ module.exports = (env) => {
     module: {
       rules: [
         {
-          test:/\.(s*)css$/,
-          use: ExtractTextPlugin.extract({
-            fallback: "style-loader",
-            use: [
-              {
-                loader: "css-loader",
-                options: {
-                  importLoaders: 1
-                }
-              },
-              {
-                loader: "postcss-loader?parser=postcss-scss",
-                options: {
-                  plugins: [
-                    require("autoprefixer")(),
-                    require("postcss-clean")()
-                  ]
-                }
-              },
-              "sass-loader"
-            ]
-          })
-        },
-        {
           test: /\.js$/,
           loader: "babel-loader",
           query: {
@@ -115,6 +91,29 @@ module.exports = (env) => {
       module: {
         rules: [
           {
+            test:/\.(s*)css$/,
+            use: ExtractTextPlugin.extract({
+              fallback: "style-loader",
+              use: [
+                {
+                  loader: "css-loader",
+                  options: {
+                    importLoaders: 1
+                  }
+                },
+                {
+                  loader: "postcss-loader?parser=postcss-scss",
+                  options: {
+                    plugins: [
+                      require("autoprefixer")()
+                    ]
+                  }
+                },
+                "sass-loader"
+              ]
+            })
+          },
+          {
             test: /\.js$/,
             exclude: /node_modules/,
             loader: "eslint-loader"
@@ -132,6 +131,35 @@ module.exports = (env) => {
 
   if (target === "build") {
     return merge(common, {
+      module: {
+        rules: [
+          {
+            test:/\.(s*)css$/,
+            use: ExtractTextPlugin.extract({
+              fallback: "style-loader",
+              use: [
+                {
+                  loader: "css-loader",
+                  options: {
+                    importLoaders: 1
+                  }
+                },
+                {
+                  loader: "postcss-loader?parser=postcss-scss",
+                  options: {
+                    plugins: [
+                      require("autoprefixer")(),
+                      require("postcss-clean")()
+                    ]
+                  }
+                },
+                "sass-loader"
+              ]
+            })
+          }
+        ]
+      },
+      
       plugins: [
         new UglifyWebpackPlugin(),
         new ImageminPlugin({
