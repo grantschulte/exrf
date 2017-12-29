@@ -31,5 +31,5 @@
 .inline-code {
   font-size: 0.875em;
   padding: 4px;
-  background-color: lighten(map-get($colors-brand, "black-alt"), 5%);
+  background-color: lighten(map-get($colors-brand, black-alt), 5%);
 }

@@ -19,7 +19,7 @@
 
       &.active,
       &:hover {
-        color: map-get($colors-brand, "gray");
+        color: map-get($colors-brand, gray);
       }
     }
   }
@@ -37,7 +37,7 @@
     }
 
     &:hover {
-      color: map-get($colors-brand, "gray");
+      color: map-get($colors-brand, gray);
     }
 
     @include bp-max($md) {
@@ -52,7 +52,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: map-get($colors-brand, "black-alt");
+    background-color: map-get($colors-brand, black-alt);
     padding: 0;
 
     ul {

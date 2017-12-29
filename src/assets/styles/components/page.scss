@@ -23,7 +23,7 @@
   }
 
   .col {
-    border-bottom: 2px solid map-get($colors-brand, "black-alt");
+    border-bottom: 2px solid map-get($colors-brand, black-alt);
     flex: 1;
 
     @include bp-max($lg) {
