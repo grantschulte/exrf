@@ -4,6 +4,7 @@
 
 html {
   height: 100%;
+  width: 100%;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -13,7 +14,8 @@ body {
   font-size: 16px;
   font-family: $font-roboto;
   height: 100%;
-  background-color: darken(map-get($colors-brand, black-alt), 2.5%);
+  width: 100%;
+  background-color: darken(map-get($colors-brand, "black-alt"), 2.5%);
 
   &.menu-on {
     overflow: hidden;
@@ -36,6 +38,6 @@ a {
   transition: 200ms color ease-in-out;
 
   &:hover {
-    color: map-get($colors-brand, red);
+    color: map-get($colors-brand, "red");
   }
 }

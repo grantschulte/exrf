@@ -1,12 +1,12 @@
 .code-example {
-  border: 1px solid map-get($colors-brand, black-alt);
+  border: 1px solid map-get($colors-brand, "black-alt");
   margin-bottom: 2em;
 
   &__title {
     text-transform: uppercase;
     padding: 1em;
     margin: 0;
-    background-color: map-get($colors-brand, black-alt);
+    background-color: map-get($colors-brand, "black-alt");
   }
 
   pre {
@@ -15,7 +15,7 @@
     padding: 1em 2em;
     white-space: pre-wrap;
     font-size: em(14px);
-    color: map-get($colors-brand, gray-light);
-    background-color: darken(map-get($colors-brand, black-alt), 2.5%);
+    color: map-get($colors-brand, "gray-light");
+    background-color: darken(map-get($colors-brand, "black-alt"), 2.5%);
   }
 }

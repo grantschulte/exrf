@@ -3,7 +3,7 @@
   flex-flow: column;
   padding: 2rem;
   grid-area: 1 / 1 / 3 / 2;
-  background-color: map-get($colors-brand, black-alt);
+  background-color: map-get($colors-brand, "black-alt");
 
   #logo {
     display: flex;
@@ -16,7 +16,7 @@
       }
     }
 
-    @media screen and (max-width: $md) {
+    @include bp-max($md) {
       flex: 1;
       margin-bottom: 0;
     }
@@ -37,13 +37,13 @@
       color: lighten(map-get($colors-brand, gray), 50%);
     }
 
-    @media screen and (max-width: $md) {
+    @include bp-max($md) {
       display: flex;
       flex: 1;
     }
   }
 
-  @media screen and (max-width: $md) {
+  @include bp-max($md) {
     flex-flow: row;
     grid-area: 1 / 1 / 2 / 3;
     padding: 0 2em;

@@ -25,8 +25,8 @@
       font-weight: bold;
     }
 
-    @media screen and (max-width: $lg) {
-      grid-template-columns: 1fr;
+    @include bp-max($lg) {
+      grid-template-columns: 100%;
     }
   }
 }

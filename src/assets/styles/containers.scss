@@ -1,5 +1,6 @@
 #site-container {
   height: 100%;
+  width: 100%;
 }
 
 #main-container {
@@ -8,7 +9,7 @@
   grid-template-rows: 64px auto;
   height: 100%;
 
-  @media screen and (max-width: $md) {
+  @include bp-max($md) {
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -18,7 +19,7 @@
   flex-direction: column;
   grid-area: 1 / 2 / 3 / 3;
 
-  @media screen and (max-width: $md) {
+  @include bp-max($md) {
     grid-area: 2 / 1 / 3 / 3;
   }
 }

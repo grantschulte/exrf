@@ -19,7 +19,7 @@
 
       &.active,
       &:hover {
-        color: map-get($colors-brand, gray);
+        color: map-get($colors-brand, "gray");
       }
     }
   }
@@ -37,10 +37,10 @@
     }
 
     &:hover {
-      color: map-get($colors-brand, gray);
+      color: map-get($colors-brand, "gray");
     }
 
-    @media screen and (max-width: $md) {
+    @include bp-max($md) {
       display: inline-block;
     }
   }
@@ -52,7 +52,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: map-get($colors-brand, black-alt);
+    background-color: map-get($colors-brand, "black-alt");
     padding: 0;
 
     ul {
@@ -63,7 +63,7 @@
     }
   }
 
-  @media screen and (max-width: $md) {
+  @include bp-max($md) {
     display: none;
 
     #close {
