@@ -3,6 +3,21 @@ include ./mixins/code-example
 
 block content
   div(class="row")
+    div(class="col")
+      h4(id="usage") Usage
+      p.
+        Typography style application should be a combination of alteration
+        helper classes and base element styles. Many of the things we want
+        to do with typography can be shared across different types of tags.
+        For instance #[span(class="inline-code") .uppercase] and 
+        #[span(class="inline-code") .normal] or 
+        #[span(class="inline-code") .heavy] can be applied to headlines, 
+        paragraphs, and other elements. It's best to use these in
+        conjunction with a base element style rather than to build a
+        completely custom class with duplicate style declarations. This also
+        makes specific elements more flexible on a per-page basis.
+      
+  div(class="row")
     div(class="col col-2")
       h1(class="headline heavy") Large Headline
       
