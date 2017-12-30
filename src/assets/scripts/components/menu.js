@@ -4,11 +4,13 @@ class Menu {
   constructor(el) {
     Object.assign(this, {
       $el: el,
-      isOpen: false
+      isOpen: false,
+      bodyClass: "menu-open",
+      menuClass: "open"
     });
 
-    this.$trigger = document.querySelector(".js-menuTrigger");
-    this.$closeEl = document.querySelector(".js-menuClose");
+    this.$trigger = document.querySelector(".js-menu-trigger");
+    this.$closeEl = document.querySelector(".js-menu-close");
 
     this.$trigger.addEventListener("click", (e) => {
       this.toggle(e);
@@ -36,15 +38,15 @@ class Menu {
   }
 
   close() {
-    this.$el.classList.remove("open");
+    this.$el.classList.remove(this.menuClass);
     this.isOpen = false;
-    document.body.classList.remove("menuOpen");
+    document.body.classList.remove(this.bodyClass);
   }
 
   open() {
-    this.$el.classList.add("open");
+    this.$el.classList.add(this.menuClass);
     this.isOpen = true;
-    document.body.classList.add("menuOpen");
+    document.body.classList.add(this.bodyClass);
   }
 }
 

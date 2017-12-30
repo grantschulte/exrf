@@ -7,7 +7,7 @@ block content
       h4(id="usage") Usage
       p.
         Color values should be obtained from the 
-        #[span(class="inline-code") $colorsBrand] SCSS map or from the
+        #[span(class="inline-code") $colors-brand] SCSS map or from the
         associated helper variables. This ensures that we only use valid 
         colors and that we don't end up with repetetive definitions or 
         worse—the wrong colors.
@@ -50,39 +50,39 @@ block content
             }
             
     div(class="page-grid__item")
-      div(class="color-box bg--grayLight") Steel Gray
-      div(class="color-box bg--grayLight--l1")
-      div(class="color-box bg--grayLight--l2")
-      div(class="color-box bg--grayLight--l3")
+      div(class="color-box bg--gray-light") Steel Gray
+      div(class="color-box bg--gray-light--l1")
+      div(class="color-box bg--gray-light--l2")
+      div(class="color-box bg--gray-light--l3")
         
     div(class="page-grid__item")
       +example("scss")
         pre(class="language-scss")
           code(class="language-scss").
-            .bg--grayLight {
-              background-color: $grayLight;
+            .bg--gray-light {
+              background-color: $gray-light;
             }
             
-            .color--grayLight {
-              color: $grayLight;
+            .color--gray-light {
+              color: $gray-light;
             }
             
     div(class="page-grid__item")
-      div(class="color-box bg--blackAlt") Rich Black
-      div(class="color-box bg--blackAlt--l1")
-      div(class="color-box bg--blackAlt--l2")
-      div(class="color-box bg--blackAlt--l3")
+      div(class="color-box bg--black-alt") Rich Black
+      div(class="color-box bg--black-alt--l1")
+      div(class="color-box bg--black-alt--l2")
+      div(class="color-box bg--black-alt--l3")
         
     div(class="page-grid__item")
       +example("scss")
         pre(class="language-scss")
           code(class="language-scss").
-            .bg--blackAlt {
-              background-color: $blackAlt;
+            .bg--black-alt {
+              background-color: $black-alt;
             }
             
-            .color--blackAlt {
-              color: $blackAlt;
+            .color--black-alt {
+              color: $black-alt;
             }
             
     div(class="page-grid__item")

@@ -1,5 +1,6 @@
 #page {
   flex: 1;
+  max-width: $xxl;
 
   .row {
     margin: 1em 0;
@@ -27,7 +28,7 @@
   }
 
   .col {
-    border-bottom: 2px solid map-get($colorsBrand, blackAlt);
+    border-bottom: 2px solid map-get($colors-brand, black-alt);
     flex: 1;
   }
 

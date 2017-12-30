@@ -6,26 +6,26 @@
 
 // Fonts
 
-$fontRoboto: "Roboto", Helvetica, sans-serif;
-$fontRobotoCondensed: "Roboto Condensed", Helvetica, sans-serif;
+$font-roboto: "Roboto", Helvetica, sans-serif;
+$font-roboto-condensed: "Roboto Condensed", Helvetica, sans-serif;
 
 // Colors
 
-$colorsBrand: (
+$colors-brand: (
   red: #c80000,
   black: #000000,
-  blackAlt: #161f22,
+  black-alt: #161f22,
   gray: #7f959c,
-  grayLight: #c5d1d3
+  gray-light: #c5d1d3
 );
 
 $black: #000000;
 $white: #FFFFFF;
-$red:       map-get($colorsBrand, red);
-$black:     map-get($colorsBrand, black);
-$blackAlt:  map-get($colorsBrand, blackAlt);
-$gray:      map-get($colorsBrand, gray);
-$grayLight: map-get($colorsBrand, grayLight);
+$red:        map-get($colors-brand, red);
+$black:      map-get($colors-brand, black);
+$black-alt:  map-get($colors-brand, black-alt);
+$gray:       map-get($colors-brand, gray);
+$gray-light: map-get($colors-brand, gray-light);
 
 // Breakpoints
 
