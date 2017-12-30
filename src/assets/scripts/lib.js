@@ -1,3 +1,2 @@
-import "../styles/prism.scss";
-
-import "./prism";
+import "../styles/lib/prism.scss";
+import "./lib/prism";

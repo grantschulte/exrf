@@ -12,12 +12,12 @@ body {
   padding: 0;
   margin: 0;
   font-size: 16px;
-  font-family: $font-roboto;
+  font-family: $fontRoboto;
   height: 100%;
   width: 100%;
-  background-color: darken(map-get($colors-brand, black-alt), 2.5%);
+  background-color: darken(map-get($colorsBrand, blackAlt), 2.5%);
 
-  &.-menuOpen {
+  &.menuOpen {
     overflow: hidden;
   }
 }
@@ -26,7 +26,7 @@ p {
   color: $white;
   line-height: 1.5;
 
-  &.-sm {
+  &.sm {
     font-size: em(12px);
   }
 }
@@ -38,6 +38,6 @@ a {
   transition: 200ms color ease-in-out;
 
   &:hover {
-    color: map-get($colors-brand, red);
+    color: map-get($colorsBrand, red);
   }
 }

@@ -13,17 +13,21 @@
       }
     }
 
+    @include bp-max($xl) {
+      padding: 2em;
+    }
+
     @include bp-max($lg) {
       flex-direction: column;
     }
 
-    @include bp-max($xl) {
-      padding: 2em;
+    @include bp-max($md) {
+      padding: 1em 2em;
     }
   }
 
   .col {
-    border-bottom: 2px solid map-get($colors-brand, black-alt);
+    border-bottom: 2px solid map-get($colorsBrand, blackAlt);
     flex: 1;
   }
 
@@ -51,7 +55,6 @@
     &__item {
       display: flex;
       flex-flow: column;
-      height: 100%;
 
       .code-example:only-child {
         margin-bottom: 0;
