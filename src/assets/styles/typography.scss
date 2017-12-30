@@ -3,32 +3,34 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $font-roboto;
   color: $white;
 
-  &.uppercase {
+  &.-up {
     text-transform: uppercase;
   }
 
-  &.normal {
+  &.-caps {
+    text-transform: capitalize;
+  }
+
+  &.-nml {
     font-weight: 400;
   }
 
-  &.heavy {
+  &.-hvy {
     font-weight: 900;
   }
 
-  &.light {
+  &.-lt {
     font-weight: 300;
   }
 }
 
-h1 {
-  &.headline {
+.headline {
+  &.-lg {
     font-size: em(60px);
     line-height: 1.25;
   }
-}
 
-h4 {
-  &.headline {
+  &.-sm {
     font-size: em(16px);
     line-height: 1.25;
     letter-spacing: 1.5px;

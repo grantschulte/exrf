@@ -7,103 +7,100 @@ block content
       h4(id="usage") Usage
       p.
         Color values should be obtained from the 
-        #[span(class="inline-code") $colors-brand] SCSS map. This
-        ensures that we only use valid colors and that we don't end up with
-        repetetive definitions or worse—the wrong colors.
+        #[span(class="inline-code") $colors-brand] SCSS map or from the
+        associated helper variables. This ensures that we only use valid 
+        colors and that we don't end up with repetetive definitions or 
+        worse—the wrong colors.
       
-  div(class="color-grid row")
-    div(class="color-grid__item")
+  div(class="page-grid row")
+    div(class="page-grid__item")
       div(class="color-box bg--red") Shudder Red
       div(class="color-box bg--red--l1")
       div(class="color-box bg--red--l2")
       div(class="color-box bg--red--l3")
         
-    div(class="color-grid__item")
+    div(class="page-grid__item")
       +example("scss")
         pre(class="language-scss")
           code(class="language-scss").
             .bg--red {
-              background-color: map-get($colors-brand&#44; red);
+              background-color: $red;
             }
             
             .color--red {
-              color: map-get($colors-brand&#44; red);
+              color: $red;
             }
       
-  div(class="color-grid row")
-    div(class="color-grid__item")
+    div(class="page-grid__item")
       div(class="color-box bg--gray") Light Steel Gray
       div(class="color-box bg--gray--l1")
       div(class="color-box bg--gray--l2")
       div(class="color-box bg--gray--l3")
         
-    div(class="color-grid__item")
+    div(class="page-grid__item")
       +example("scss")
         pre(class="language-scss")
           code(class="language-scss").
             .bg--gray {
-              background-color: map-get($colors-brand&#44; gray);
+              background-color: $gray;
             }
             
             .color--gray {
-              color: map-get($colors-brand&#44; gray);
+              color: $gray;
             }
             
-  div(class="color-grid row")
-    div(class="color-grid__item")
+    div(class="page-grid__item")
       div(class="color-box bg--gray-light") Steel Gray
       div(class="color-box bg--gray-light--l1")
       div(class="color-box bg--gray-light--l2")
       div(class="color-box bg--gray-light--l3")
         
-    div(class="color-grid__item")
+    div(class="page-grid__item")
       +example("scss")
         pre(class="language-scss")
           code(class="language-scss").
             .bg--gray-light {
-              background-color: map-get($colors-brand, gray-light);
+              background-color: $gray-light;
             }
             
             .color--gray-light {
-              color: map-get($colors-brand, gray-light);
+              color: $gray-light;
             }
             
-  div(class="color-grid row")
-    div(class="color-grid__item")
+    div(class="page-grid__item")
       div(class="color-box bg--black-alt") Rich Black
       div(class="color-box bg--black-alt--l1")
       div(class="color-box bg--black-alt--l2")
       div(class="color-box bg--black-alt--l3")
         
-    div(class="color-grid__item")
+    div(class="page-grid__item")
       +example("scss")
         pre(class="language-scss")
           code(class="language-scss").
             .bg--black-alt {
-              background-color: map-get($colors-brand, black-alt);
+              background-color: $black-alt;
             }
             
-            .color--red {
-              color: map-get($colors-brand, black-alt);
+            .color--black-alt {
+              color: $black-alt;
             }
             
-  div(class="color-grid row")
-    div(class="color-grid__item")
+    div(class="page-grid__item")
       div(class="color-box bg--black") Black
       div(class="color-box bg--black")
       div(class="color-box bg--black")
       div(class="color-box bg--black")
         
-    div(class="color-grid__item")
+    div(class="page-grid__item")
       +example("scss")
         pre(class="language-scss")
           code(class="language-scss").
             .bg--black {
-              background-color: map-get($colors-brand, black);
+              background-color: $black;
             }
             
             .color--black {
-              color: map-get($colors-brand, black);
+              color: $black;
             }
 
   div(class="row")

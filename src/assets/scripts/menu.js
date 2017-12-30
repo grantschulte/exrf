@@ -1,13 +1,13 @@
 const menu = document.getElementById("menu");
-const trigger = document.getElementById("menu-icon");
+const trigger = document.getElementById("menuIcon");
 const close = document.getElementById("close");
 const body = document.body;
 
 function init() {
   if (menu && trigger) {
     trigger.addEventListener("click", () => {
-      body.classList.add("menu-on");
-      menu.classList.add("on");
+      body.classList.add("-menuOpen");
+      menu.classList.add("-open");
     });
   }
 
@@ -26,8 +26,8 @@ function init() {
 
 function closeMenu() {
   if (menu) {
-    body.classList.remove("menu-on");
-    menu.classList.remove("on");
+    body.classList.remove("-menuOpen");
+    menu.classList.remove("-open");
   }
 }
 

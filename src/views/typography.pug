@@ -9,54 +9,47 @@ block content
         Typography style application should be a combination of alteration
         helper classes and base element styles. Many of the things we want
         to do with typography can be shared across different types of tags.
-        For instance #[span(class="inline-code") .uppercase] and 
-        #[span(class="inline-code") .normal] or 
-        #[span(class="inline-code") .heavy] can be applied to headlines, 
+        For instance #[span(class="inline-code") .up] and 
+        #[span(class="inline-code") .nml] or 
+        #[span(class="inline-code") .hvy] can be applied to headlines, 
         paragraphs, and other elements. It's best to use these in
         conjunction with a base element style rather than to build a
         completely custom class with duplicate style declarations. This also
         makes specific elements more flexible on a per-page basis.
       
-  div(class="row")
-    div(class="col col-2")
-      h1(class="headline heavy") Large Headline
+  div(class="page-grid row")
+    div(class="page-grid__item")
+      h1(class="headline -lg -hvy") Large Headline
       
-    div(class="col col-2")
-      div(class="examples")
-        +example("html")
-          pre(class="language-html")
-            code(class="language-html").
-              &lt;h1 class="headline heavy"&gt;Headline&lt;/h1&gt;
+    div(class="page-grid__item")
+      +example("html")
+        pre(class="language-html")
+          code(class="language-html").
+            &lt;h1 class="headline -lg -hvy"&gt;Headline&lt;/h1&gt;
               
-  div(class="row")
-    div(class="col col-2")
-      h4(class="headline uppercase") Small Headline
+    div(class="page-grid__item")
+      h4(class="headline -sm -up") Small Headline
       
-    div(class="col col-2")
-      div(class="examples")
-        +example("html")
-          pre(class="language-html")
-            code(class="language-html").
-              &lt;h4 class="headline uppercase"&gt;Headline&lt;/h4&gt;
+    div(class="page-grid__item")
+      +example("html")
+        pre(class="language-html")
+          code(class="language-html").
+            &lt;h4 class="headline -sm -up"&gt;Headline&lt;/h4&gt;
               
-  div(class="row")
-    div(class="col col-2")
+    div(class="page-grid__item")
       p Body copy
       
-    div(class="col col-2")
-      div(class="examples")
-        +example("html")
-          pre(class="language-html")
-            code(class="language-html").
-              &lt;p&gt;Body copy&lt;/p&gt;
+    div(class="page-grid__item")
+      +example("html")
+        pre(class="language-html")
+          code(class="language-html").
+            &lt;p&gt;Body copy&lt;/p&gt;
               
-  div(class="row")
-    div(class="col col-2")
-      p(class="small") Small text
+    div(class="page-grid__item")
+      p(class="-sm") Small text
       
-    div(class="col col-2")
-      div(class="examples")
-        +example("html")
-          pre(class="language-html")
-            code(class="language-html").
-              &lt;p class="small"&gt;Small text&lt;/p&gt;
+    div(class="page-grid__item")
+      +example("html")
+        pre(class="language-html")
+          code(class="language-html").
+            &lt;p class="-sm"&gt;Small text&lt;/p&gt;

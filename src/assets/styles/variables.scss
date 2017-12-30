@@ -11,9 +11,6 @@ $font-roboto-condensed: "Roboto Condensed", Helvetica, sans-serif;
 
 // Colors
 
-$black: #000000;
-$white: #FFFFFF;
-
 $colors-brand: (
   red: #c80000,
   black: #000000,
@@ -34,10 +31,18 @@ $colors-gray: (
   900: #999999
 );
 
+$black: #000000;
+$white: #FFFFFF;
+$red:         map-get($colors-brand, red);
+$black:       map-get($colors-brand, black);
+$black-alt:   map-get($colors-brand, black-alt);
+$gray:        map-get($colors-brand, gray);
+$gray-light:  map-get($colors-brand, gray-light);
+
 // Elements
 
-$header-height: 60px;
-$container-width: 1080px;
+// $header-height: 60px;
+// $container-width: 1080px;
 
 // Breakpoints
 
