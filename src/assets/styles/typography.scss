@@ -2,29 +2,9 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   font-family: $font-roboto;
   color: $white;
-
-  &.up {
-    text-transform: uppercase;
-  }
-
-  &.caps {
-    text-transform: capitalize;
-  }
-
-  &.nml {
-    font-weight: 400;
-  }
-
-  &.hvy {
-    font-weight: 900;
-  }
-
-  &.lt {
-    font-weight: 300;
-  }
 }
 
-.headline {
+.heading {
   &.lg {
     font-size: em(60px);
     line-height: 1.25;
@@ -35,4 +15,24 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.25;
     letter-spacing: 1.5px;
   }
+}
+
+.up {
+  text-transform: uppercase;
+}
+
+.caps {
+  text-transform: capitalize;
+}
+
+.nml {
+  font-weight: 400;
+}
+
+.hvy {
+  font-weight: 900;
+}
+
+.lt {
+  font-weight: 300;
 }

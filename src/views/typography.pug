@@ -4,14 +4,14 @@ include ./mixins/code-example
 block content
   div(class="row")
     div(class="col")
-      h4(id="usage") Usage
+      h4(id="usage", class="heading sm up") Usage
       p.
-        Typography style application should be a combination of alteration
-        helper classes and base element styles. Many of the things we want
-        to do with typography can be shared across different types of tags.
-        For instance #[span(class="inline-code") .up] and 
+        Typography styles should be composed of a combination of functional
+        modifier classes, base element styles, and block classes. Many of the 
+        things we wan to do with typography can be shared across different 
+        types of tags. For instance #[span(class="inline-code") .up] and 
         #[span(class="inline-code") .nml] or 
-        #[span(class="inline-code") .hvy] can be applied to headlines, 
+        #[span(class="inline-code") .hvy] can be applied to headings, 
         paragraphs, and other elements. It's best to use these in
         conjunction with a base element style rather than to build a
         completely custom class with duplicate style declarations. This also
@@ -19,22 +19,22 @@ block content
       
   div(class="page-grid row")
     div(class="page-grid__item")
-      h1(class="headline lg hvy") Large Headline
+      h1(class="heading lg hvy") Large heading
       
     div(class="page-grid__item")
       +example("html")
         pre(class="language-html")
           code(class="language-html").
-            &lt;h1 class="headline lg hvy"&gt;Headline&lt;/h1&gt;
+            &lt;h1 class="heading lg hvy"&gt;Large heading&lt;/h1&gt;
               
     div(class="page-grid__item")
-      h4(class="headline sm up") Small Headline
+      h4(class="heading sm up") Small heading
       
     div(class="page-grid__item")
       +example("html")
         pre(class="language-html")
           code(class="language-html").
-            &lt;h4 class="headline sm up"&gt;Headline&lt;/h4&gt;
+            &lt;h4 class="heading sm up"&gt;Small heading&lt;/h4&gt;
               
     div(class="page-grid__item")
       p Body copy

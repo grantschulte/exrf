@@ -1,3 +1,22 @@
 extends shared/page
+include mixins/page-heading
 
 block content
+  div(class="row")
+    div(class="col")
+      h4(class="heading sm up") Usage
+      p.
+        A blurb about form element usage...
+      
+  div(class="page-grid row")
+    div(class="page-grid__item")
+      div(
+        id="slctbx-wrap-one",
+        class="slctbx-wrap js-slctbx-wrap")
+        
+        select(id="slctbx-one", class="slctbx")
+          option 1
+          option 2
+          option 3
+      
+    div(class="page-grid__item")
