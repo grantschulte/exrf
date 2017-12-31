@@ -52,8 +52,9 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: map-get($colors-brand, black-alt);
     padding: 0;
+    background-color: map-get($colors-brand, black-alt);
+    z-index: map-get($z-index, modal);
 
     ul {
       height: calc(100% - 1em);

@@ -32,6 +32,16 @@ $gray:       map-get($colors-brand, gray);
 $gray-blue:  map-get($colors-text, gray-blue);
 $gray-light: map-get($colors-brand, gray-light);
 
+// Stacking Context
+
+$z-index: (
+  modal:    900,
+  overlay:  800,
+  dropdown: 700,
+  header:   600,
+  footer:   500
+);
+
 // Breakpoints
 
 $xs: 320px;

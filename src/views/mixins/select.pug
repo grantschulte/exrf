@@ -3,12 +3,14 @@ mixin slct(label, name, opts)
     label(class="slct__label")
       span(class="md")= label
       span :
+      
+    span(class="slct__value-label")
     
     select(
       id=`slct-${name}__el`,
       name=name
       class="slct__el",
-      data-options=opts)
+      hidden)
       
       each opt in opts
         option(value=opt.id)= opt.name

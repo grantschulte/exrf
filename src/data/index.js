@@ -1,42 +1,42 @@
 module.exports = {
   categories: [{
-    id: 1,
+    id: "1a",
     name: "All"
   }, {
-    id: 2,
+    id: "2b",
     name: "Creature Feature"
   }, {
-    id: 3,
+    id: "3c",
     name: "Crime"
   }, {
-    id: 4,
+    id: "4d",
     name: "Dark Dimensions"
   }, {
-    id: 5,
+    id: "5e",
     name: "Documentary"
   }, {
-    id: 6,
+    id: "6f",
     name: "Ferox"
   }, {
-    id: 7,
+    id: "7g",
     name: "Mystery"
   }, {
-    id: 8,
+    id: "8h",
     name: "Paranormal"
   }, {
-    id: 9,
+    id: "9i",
     name: "Psychological Thriller"
   }, {
-    id: 10,
+    id: "10j",
     name: "Shorts"
   }, {
-    id: 11,
+    id: "11k",
     name: "Slashers"
   }, {
-    id: 12,
+    id: "12l",
     name: "Supernatural"
   }, {
-    id: 13,
+    id: "13m",
     name: "Wicked Grin"
   }]
 };

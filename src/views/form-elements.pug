@@ -26,11 +26,14 @@ block content
               label(class="slct__label")
                 span(class="md")= Genre
                 span :
+                
+              span(class="slct__value-label")
               
               select(
                 id="slct-genre__el",
                 name="genre"
-                class="slct__el")
+                class="slct__el"
+                hidden)
                 
                 // Options data should be provided to
                 // the view by the controller or by a

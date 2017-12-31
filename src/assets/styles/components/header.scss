@@ -3,7 +3,7 @@
   flex-flow: column;
   padding: 2rem;
   grid-area: 1 / 1 / 3 / 2;
-  background-color: map-get($colors-brand, black-alt);
+  background-color: $black-alt;
 
   #logo {
     display: flex;
@@ -34,7 +34,7 @@
     }
 
     &:hover {
-      color: lighten(map-get($colors-brand, gray), 50%);
+      color: lighten($gray, 50%);
     }
 
     @include bp-max($md) {
