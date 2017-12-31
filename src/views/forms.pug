@@ -6,7 +6,11 @@ include mixins/code-example
 block content
   div(class="row")
     div(class="col")
-      h4(class="heading sm up") Select Box
+      h4(id="usage", class="heading sm up") Usage
+      
+  div(class="row")
+    div(class="col")
+      h4(class="heading sm up") Select
       
   div(class="page-grid row")
     div(class="page-grid__item")
@@ -43,3 +47,19 @@ block content
                   option(value=opt.id)= opt.name
                   
               span(class="material-icons slct__arrow") arrow_drop_down
+              
+  div(class="row")
+    div(class="col")
+      h4(class="heading sm up") Input 
+      
+  div(class="row")
+    div(class="col")
+      h4(class="heading sm up") Textarea
+      
+  div(class="row")
+    div(class="col")
+      h4(class="heading sm up") Radio Button
+      
+  div(class="row")
+    div(class="col")
+      h4(class="heading sm up") Checkbox

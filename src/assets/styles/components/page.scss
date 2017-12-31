@@ -2,17 +2,16 @@
   flex: 1;
   max-width: $xxl;
 
+  h4.heading {
+    padding-bottom: 1.25em;
+    border-bottom: 2px solid map-get($colors-brand, black-alt);
+  }
+
   .row {
     margin: 1em 0;
     display: flex;
     flex-direction: row;
     padding: 2em 4em;
-
-    &:last-child {
-      .col {
-        border-bottom: 0;
-      }
-    }
 
     @include bp-max($xl) {
       padding: 2em;
@@ -28,7 +27,7 @@
   }
 
   .col {
-    border-bottom: 2px solid map-get($colors-brand, black-alt);
+    // border-bottom: 2px solid map-get($colors-brand, black-alt);
     flex: 1;
   }
 
