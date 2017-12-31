@@ -33,11 +33,6 @@ const pages = [
     name: "Assets",
     path: "/assets",
     slug: "assets"
-  },
-  {
-    name: "Helpers",
-    path: "/helpers",
-    slug: "helpers"
   }
 ];
 

@@ -2,11 +2,12 @@
   display: flex;
   align-items: center;
   height: 40px;
-  min-width: 200px;
+  width: 230px;
   padding: 0;
   border: 1px solid $gray-blue;
   border-radius: 3px;
   cursor: pointer;
+  transition: 200ms border ease-in-out;
 
   &__label {
     padding: 0 1em;
@@ -21,6 +22,7 @@
   }
 
   &__el {
+    width: 100%;
     margin-right: auto;
     margin-top: -1px;
     appearance: none;
@@ -29,6 +31,7 @@
     font-size: em(12px);
     font-weight: 500;
     color: $gray-light;
+    cursor: pointer;
 
     &:focus {
       outline: none;
@@ -37,5 +40,17 @@
 
   &__options {
     color: $gray-light;
+  }
+
+  // States
+
+  &.on {
+    border-color: lighten($gray-blue, 25%);
+  }
+
+  // Queries
+
+  @include bp-max($sm) {
+    width: 100%;
   }
 }

@@ -50,7 +50,6 @@
   .page-grid {
     display: grid;
     grid-template-columns: repeat(2, calc(50% - 1em));
-    grid-auto-rows: 1fr;
     grid-gap: 4em 2em;
 
     &__item {

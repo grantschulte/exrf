@@ -28,8 +28,42 @@
   }
 }
 
+// Flex
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+// Code
+
 .inline-code {
   font-size: 0.875em;
   padding: 4px;
   background-color: lighten(map-get($colors-brand, black-alt), 5%);
+}
+
+// Overflow
+
+.oflow-visible {
+  white-space: initial;
+}
+
+.oflow-clip {
+  text-overflow: clip;
+}
+
+.oflow-ellipsis {
+  text-overflow: ellipsis;
 }

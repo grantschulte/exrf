@@ -1,17 +1,42 @@
 extends shared/page
 include mixins/page-heading
 include mixins/select
+include mixins/code-example
 
 block content
   div(class="row")
     div(class="col")
-      h4(class="heading sm up") Usage
-      p.
-        A blurb about form element usage...
+      h4(class="heading sm up") Select Box
       
   div(class="page-grid row")
     div(class="page-grid__item")
       form(name="form-genre", method="GET", action="/form-elements")
         +slct("Genre", "genre", data.categories)
       
-    div(class="page-grid__item")
+    div(class="page-grid__item flex-col")
+      +code-example("mixin")
+        pre(class="language-pug")
+          code(class="language-pug").
+            +slct("Genre", "genre", data.categories)
+            
+      +code-example("pug")
+        pre(class="language-pug")
+          code(class="language-pug").
+            div(id="slct-genre", class="slct js-slct")
+              label(class="slct__label")
+                span(class="md")= Genre
+                span :
+              
+              select(
+                id="slct-genre__el",
+                name="genre"
+                class="slct__el")
+                
+                // Options data should be provided to
+                // the view by the controller or by a
+                // client-side script.
+                
+                each opt in opts
+                  option(value=opt.id)= opt.name
+                  
+              span(class="material-icons slct__arrow") arrow_drop_down

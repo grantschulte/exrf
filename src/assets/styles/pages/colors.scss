@@ -1,5 +1,7 @@
 #page.page-colors {
   .page-grid {
+    grid-auto-rows: 1fr;
+    
     &__item {
       height: 100%;
       flex-flow: column;

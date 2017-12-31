@@ -41,3 +41,10 @@ a {
     color: map-get($colors-brand, red);
   }
 }
+
+form {
+  @include bp-max($sm) {
+    display: block;
+    width: 100%;
+  }
+}
