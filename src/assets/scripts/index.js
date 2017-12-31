@@ -1,10 +1,10 @@
 import "../styles/manifest.scss";
 
-import Menu from "./components/menu.js";
+import Styleguide from "./app";
 
-function init() {
-  const menuEl = document.querySelector(".js-menu");
-  new Menu(menuEl);
-}
+// Initialize Application
 
-init();
+window.onload = () => {
+  Styleguide.menu("js-menu");
+  Styleguide.selectBoxes("slct");
+};
