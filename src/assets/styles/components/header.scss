@@ -46,6 +46,6 @@
   @include bp-max($md) {
     flex-flow: row;
     grid-area: 1 / 1 / 2 / 3;
-    padding: 0 2em;
+    padding: 0 1em;
   }
 }

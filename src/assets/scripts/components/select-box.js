@@ -16,6 +16,15 @@ class SelectBox {
       this.$el.addEventListener("click", () => {
         this.toggle();
       });
+
+      // Close menu if click occurs outside of element.
+
+      document.addEventListener("click", (e) => {
+        if (e.target.id !== this.$el.id
+          && e.target.parentElement.id !== this.$el.id) {
+          this.close();
+        }
+      });
     }
   }
 

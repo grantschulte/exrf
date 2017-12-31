@@ -20,9 +20,9 @@ const pages = [
     slug: "buttons"
   },
   {
-    name: "Form Elements",
-    path: "/form-elements",
-    slug: "form-elements"
+    name: "Forms",
+    path: "/forms",
+    slug: "forms"
   },
   {
     name: "Cards",
