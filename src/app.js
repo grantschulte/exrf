@@ -9,6 +9,10 @@ const app = express();
 const isPage = require("./middleware/is-page");
 const { dirs, pages } = require("./config");
 
+// Mock data
+
+const mocks = require("./data");
+
 dotenv.load();
 
 // Configuration
@@ -21,7 +25,8 @@ app
 
 app.locals = {
   pages,
-  version: require("../package.json").version
+  version: require("../package.json").version,
+  data: mocks
 };
 
 // Middleware

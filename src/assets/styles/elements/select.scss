@@ -1,0 +1,41 @@
+.slct {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  min-width: 200px;
+  padding: 0;
+  border: 1px solid $gray-blue;
+  border-radius: 3px;
+  cursor: pointer;
+
+  &__label {
+    padding: 0 1em;
+    font-size: em(12px);
+    color: $gray-blue;
+  }
+
+  &__arrow {
+    padding: 0 0.5em;
+    font-size: em(18px);
+    color: $gray-light;
+  }
+
+  &__el {
+    margin-right: auto;
+    margin-top: -1px;
+    appearance: none;
+    background: transparent;
+    border: none;
+    font-size: em(12px);
+    font-weight: 500;
+    color: $gray-light;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__options {
+    color: $gray-light;
+  }
+}

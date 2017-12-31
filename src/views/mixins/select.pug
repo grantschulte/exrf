@@ -1,0 +1,16 @@
+mixin slct(label, name, opts)
+  div(id=`slct-${name}`, class="slct js-slct")
+    label(class="slct__label")
+      span(class="md")= label
+      span :
+    
+    select(
+      id=`slct__el-${name}`,
+      name=name
+      class="slct__el",
+      data-options=opts)
+      
+      each opt in opts
+        option(value=opt.id)= opt.name
+        
+    span(class="material-icons slct__arrow") arrow_drop_down

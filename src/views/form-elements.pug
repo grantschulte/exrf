@@ -1,5 +1,6 @@
 extends shared/page
 include mixins/page-heading
+include mixins/select
 
 block content
   div(class="row")
@@ -10,13 +11,7 @@ block content
       
   div(class="page-grid row")
     div(class="page-grid__item")
-      div(
-        id="slctbx-wrap-one",
-        class="slctbx-wrap js-slctbx-wrap")
-        
-        select(id="slctbx-one", class="slctbx")
-          option 1
-          option 2
-          option 3
+      form(name="form-genre", method="GET", action="/form-elements")
+        +slct("Genre", "genre", data.categories)
       
     div(class="page-grid__item")

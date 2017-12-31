@@ -19,12 +19,17 @@ $colors-brand: (
   gray-light: #c5d1d3
 );
 
+$colors-text: (
+  gray-blue: lighten(map-get($colors-brand, black-alt), 20%)
+);
+
 $black: #000000;
 $white: #FFFFFF;
 $red:        map-get($colors-brand, red);
 $black:      map-get($colors-brand, black);
 $black-alt:  map-get($colors-brand, black-alt);
 $gray:       map-get($colors-brand, gray);
+$gray-blue:  map-get($colors-text, gray-blue);
 $gray-light: map-get($colors-brand, gray-light);
 
 // Breakpoints
