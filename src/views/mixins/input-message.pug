@@ -1,0 +1,20 @@
+mixin input-message(type, message)
+  - type = type || "info";
+  - let icon = "info";
+  
+  case type
+    when "error"
+      - icon = "error"
+      - break
+    when "success"
+      - icon = "check_circle"
+      - break
+    when "info"
+      - icon = "info"
+      - break
+    default
+      - icon = "info"
+  
+  div(class=`input-message ${type}`)
+    span(class="input-message__icon material-icons")= icon
+    span= message

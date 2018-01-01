@@ -41,7 +41,7 @@ input {
 .input-message {
   font-size: em(12px);
   display: flex;
-  color: $black;
+  color: $white;
   margin: 1em 0 0 0;
 
   &__icon {
@@ -49,6 +49,10 @@ input {
     top: -1px;
     margin-right: 0.5em;
     font-size: em(22px);
+  }
+
+  &.info {
+    color: $white;
   }
 
   &.success {

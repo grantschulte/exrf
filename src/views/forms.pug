@@ -2,6 +2,7 @@ extends shared/page
 include mixins/page-heading
 include mixins/select
 include mixins/code-example
+include mixins/input-message
 
 block content
   div(class="row row--heading")
@@ -22,7 +23,10 @@ block content
       +code-example("pug")
         pre(class="language-pug")
           code(class="language-pug").
-            div(id="slct-genre", class="slct js-slct")
+            div(
+              id="slct-genre",
+              class="slct js-slct")
+              
               label(class="slct__label")
                 span(class="md")= Genre
                 span :
@@ -110,9 +114,7 @@ block content
           placeholder="krueger@elm.street",
           value="krueger@elm.street")
           
-        div(class="input-message success")
-          span(class="input-message__icon material-icons") check_circle
-          span Successful action was taken.
+        +input-message("success", "Successful action was taken.")
           
       div(class="mb1")
         label(
@@ -126,12 +128,40 @@ block content
           placeholder="krueger@elm.street",
           value="krueger@elm.street")
           
-        div(class="input-message error")
-          span(class="input-message__icon material-icons") error
-          span An error occured.
+        +input-message("error", "An error occurred.")
           
     div(class="page-grid__item")
-        
+      +code-example("pug")
+        pre(class="language-pug")
+          code(class="language-pug").
+            // Default State
+            
+            div
+              label(
+                for="user[email]",
+                class="input-label") Email Address
+              
+              input(
+                type="email",
+                id="user[email]"
+                name="user[email]",
+                placeholder="krueger@elm.street")
+                
+            // Valid input
+            
+            input(class="valid")
+              
+            // Invalid input
+            
+            input(class="invalid")
+              
+            // Input Message
+            //
+            // Messages take the type ("info", "error", "success")
+            // and a message.
+            
+            +input-message("error", "An error occurred.")
+            +input-message("success", "Successful action was taken.")
       
   div(class="row row--heading")
     div(id="textarea", class="col")
