@@ -1,0 +1,8 @@
+mixin button(text, type, icon)
+  - type = type || "primary";
+  - icon = icon || undefined;
+  
+  button(class=`btn btn--${type}`)
+    if icon
+      span(class="material-icons btn__icon") #{icon}
+    span #{text}

@@ -16,10 +16,14 @@
       font-weight: bold;
       font-size: em(14px);
       text-transform: uppercase;
+      color: rgba(255, 255, 255, 1);
+      text-shadow: 0 0 1px rgba(255, 255, 255, 0);
+      transition: 200ms all ease-in-out;
 
       &.active,
       &:hover {
-        color: map-get($colors-brand, gray);
+        color: rgba(255, 255, 255, 0);
+        text-shadow: 0 0 1px rgba(255, 255, 255, 0.8);
       }
     }
   }

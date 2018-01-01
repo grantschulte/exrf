@@ -1,4 +1,6 @@
 extends shared/page
+include mixins/code-example
+include mixins/button
 
 block content
   div(class="row")
@@ -12,15 +14,13 @@ block content
   div(class="page-grid row")
     div(class="page-grid__item flex-col")
       div(class="mb1")
-        button(class="btn btn--primary") Submit
+        +button("Submit", "primary")
       
       div(class="mb1")
-        button(class="btn btn--primary") Login
+        +button("Login", "primary")
       
       div(class="mb1")
-        button(class="btn btn--primary")
-          span(class="material-icons btn__icon") play_arrow
-          span Play
+        +button("Play", "primary", "play_arrow")
           
       div(class="mb1")
         button(class="btn btn--primary loading")
@@ -33,12 +33,46 @@ block content
           span Play
           
       div
-        button(class="btn btn--primary")
-          span(class="material-icons btn__icon") play_arrow
-          span Resume S1:E1
+        +button("Resume S1:E1", "primary", "play_arrow")
       
     div(class="page-grid__item flex-col")
-
+      +code-example("html")
+        pre(class="language-html")
+          code(class="language-html").
+            &lt;button class="btn btn--primary"&gt;Submit&lt;/button&gt;
+            &lt;button class="btn btn--primary"&gt;Login&lt;/button&gt;
+            
+            &lt;button class="btn btn--primary"&gt;
+              &lt;span class="material-icons"&gt;play&lt;/span&gt;
+              &lt;span&gt;Play&lt;/span&gt;
+            &lt;/button&gt;
+            
+            &lt;!-- Buttons with the loading class will 
+            hide their contents and show a spinner. --&gt;
+            &lt;button class="btn btn--primary loading"&gt;
+              &lt;span class="material-icons"&gt;play&lt;/span&gt;
+              &lt;span&gt;Play&lt;/span&gt;
+            &lt;/button&gt;
+            
+            &lt;button class="btn btn--primary" disabled&gt;
+              &lt;span class="material-icons"&gt;play&lt;/span&gt;
+              &lt;span&gt;Play&lt;/span&gt;
+            &lt;/button&gt;
+            
+            &lt;button class="btn btn--primary"&gt;
+              &lt;span class="material-icons"&gt;play&lt;/span&gt;
+              &lt;span&gt;Resume S1:E1&lt;/span&gt;
+            &lt;/button&gt;
+          
+      +code-example("mixin")
+        pre(class="language-pug")
+          code(class="language-pug").
+            // Button mixin takes text, type, and icon...
+            
+            +button("Submit", "primary")
+            +button("Login", "primary")
+            +button("Login", "primary", "play_arrow")
+            +button("Resume S1:E1", "primary", "play_arrow")
       
   div(class="row")
     div(class="col")
