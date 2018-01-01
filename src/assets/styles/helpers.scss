@@ -54,6 +54,22 @@
   background-color: lighten(map-get($colors-brand, black-alt), 5%);
 }
 
+// Elements
+
+.full-w {
+  width: 100%;
+}
+
+.full-h {
+  height: 100%;
+}
+
+// Margins & Paddings
+
+.mb1 {
+  margin-bottom: 1em;
+}
+
 // Overflow
 
 .oflow-visible {

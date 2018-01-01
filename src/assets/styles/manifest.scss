@@ -4,7 +4,6 @@
 
 @import "global";
 @import "containers";
-@import "typography";
 @import "helpers";
 
 @import "components/header";
@@ -16,5 +15,8 @@
 @import "pages/colors";
 @import "pages/typography";
 @import "pages/forms";
+@import "pages/buttons";
 
+@import "elements/buttons";
+@import "elements/typography";
 @import "elements/select";
