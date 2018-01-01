@@ -4,13 +4,9 @@ include mixins/select
 include mixins/code-example
 
 block content
-  div(class="row")
+  div(class="row row--heading")
     div(class="col")
-      h4(id="usage", class="heading sm up") Usage
-      
-  div(class="row")
-    div(class="col")
-      h4(class="heading sm up") Select
+      h4(id="select", class="heading sm up") Select
       
   div(class="page-grid row")
     div(class="page-grid__item")
@@ -48,18 +44,103 @@ block content
                   
               span(class="material-icons slct__arrow") arrow_drop_down
               
-  div(class="row")
+  div(class="row row--heading")
     div(class="col")
-      h4(class="heading sm up") Input 
+      h4(id="input", class="heading sm up") Input
       
-  div(class="row")
-    div(class="col")
+  div(class="page-grid row")
+    div(class="page-grid__item flex-col")
+      div(class="mb1")
+        label(
+          for="user[email]",
+          class="input-label") Email Address
+        
+        input(
+          type="email",
+          id="user[email]"
+          name="user[email]",
+          placeholder="krueger@elm.street")
+          
+      div(class="mb1")
+        label(
+          for="user[password]",
+          class="input-label") Password
+        
+        input(
+          type="password",
+          id="user[password]"
+          name="user[password]",
+          placeholder="********")
+      
+      div(class="mb1")
+        label(
+          for="user[name]",
+          class="input-label") Name
+        
+        input(
+          type="text",
+          id="user[name]"
+          name="user[name]",
+          class="valid",
+          value="Freddy Krueger",
+          placeholder="Freddy Krueger")
+      
+      div(class="mb1")
+        label(
+          for="user[email-bad]",
+          class="input-label") Email Address
+        
+        input(
+          type="email",
+          id="user[email-bad]"
+          name="user[email-bad]",
+          value="freddy666",
+          class="invalid"
+          placeholder="krueger@elm.street")
+      
+      div(class="mb1")
+        label(
+          for="user[email-loading]",
+          class="input-label") Email Address
+        
+        input(
+          type="email",
+          id="user[email-loading]"
+          name="user[email-loading]",
+          placeholder="krueger@elm.street",
+          value="krueger@elm.street")
+          
+        div(class="input-message success")
+          span(class="input-message__icon material-icons") check_circle
+          span Successful action was taken.
+          
+      div(class="mb1")
+        label(
+          for="user[email-loading]",
+          class="input-label") Email Address
+        
+        input(
+          type="email",
+          id="user[email-loading]"
+          name="user[email-loading]",
+          placeholder="krueger@elm.street",
+          value="krueger@elm.street")
+          
+        div(class="input-message error")
+          span(class="input-message__icon material-icons") error
+          span An error occured.
+          
+    div(class="page-grid__item")
+        
+      
+  div(class="row row--heading")
+    div(id="textarea", class="col")
       h4(class="heading sm up") Textarea
       
-  div(class="row")
+  div(class="row row--heading")
     div(class="col")
-      h4(class="heading sm up") Radio Button
+      h4(id="radio-button", class="heading sm up") Radio Button
       
-  div(class="row")
+  div(class="row row--heading")
     div(class="col")
-      h4(class="heading sm up") Checkbox
+      h4(id="checkbox", class="heading sm up") Checkbox

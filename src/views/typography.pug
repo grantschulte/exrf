@@ -2,7 +2,7 @@ extends shared/page
 include ./mixins/code-example
 
 block content
-  div(class="row")
+  div(class="row row--heading")
     div(class="col")
       h4(id="usage", class="heading sm up") Usage
       p.
@@ -17,27 +17,41 @@ block content
         completely custom class with duplicate style declarations. This also
         makes specific elements more flexible on a per-page basis.
       
+  div(class="row row--heading")
+    div(class="col")
+      h4(id="large-heading", class="heading sm up") Large Heading
+      
   div(class="page-grid row")
     div(class="page-grid__item")
-      h1(class="heading lg hvy") Large heading
+      h1(class="heading lg hvy") Horror Movie
       
     div(class="page-grid__item flex-col")
       +code-example("html")
         pre(class="language-html")
           code(class="language-html").
             &lt;h1 class="heading lg hvy"&gt;Large heading&lt;/h1&gt;
-              
+            
+  div(class="row row--heading")
+    div(class="col")
+      h4(id="small-heading", class="heading sm up") Small Heading
+  
+  div(class="page-grid row")                    
     div(class="page-grid__item")
-      h4(class="heading sm up") Small heading
+      h4(class="heading sm up") Creatures In The Night
       
     div(class="page-grid__item flex-col")
       +code-example("html")
         pre(class="language-html")
           code(class="language-html").
             &lt;h4 class="heading sm up"&gt;Small heading&lt;/h4&gt;
-              
+            
+  div(class="row row--heading")
+    div(class="col")
+      h4(id="body-copy", class="heading sm up") Body Copy
+                
+  div(class="page-grid row")      
     div(class="page-grid__item")
-      p Body copy
+      p A bloody, gruesome, raging good time.
       
     div(class="page-grid__item flex-col")
       +code-example("html")
@@ -45,8 +59,13 @@ block content
           code(class="language-html").
             &lt;p&gt;Body copy&lt;/p&gt;
               
+  div(class="row row--heading")
+    div(class="col")
+      h4(id="small-text", class="heading sm up") Small Text
+            
+  div(class="page-grid row")    
     div(class="page-grid__item")
-      p(class="sm") Small text
+      p(class="sm") We are not responsible for crippling fear and anxiety.
       
     div(class="page-grid__item flex-col")
       +code-example("html")

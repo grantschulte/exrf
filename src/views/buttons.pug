@@ -3,11 +3,7 @@ include mixins/code-example
 include mixins/button
 
 block content
-  div(class="row")
-    div(class="col")
-      h4(id="usage", class="heading sm up") Usage
-      
-  div(class="row")
+  div(class="row row--heading")
     div(class="col")
       h4(class="heading sm up") Primary
       
@@ -49,6 +45,7 @@ block content
             
             &lt;!-- Buttons with the loading class will 
             hide their contents and show a spinner. --&gt;
+            
             &lt;button class="btn btn--primary loading"&gt;
               &lt;span class="material-icons"&gt;play&lt;/span&gt;
               &lt;span&gt;Play&lt;/span&gt;
@@ -74,20 +71,17 @@ block content
             +button("Login", "primary", "play_arrow")
             +button("Resume S1:E1", "primary", "play_arrow")
       
-  div(class="row")
+  div(class="row row--heading")
     div(class="col")
       h4(class="heading sm up") Secondary
 
   div(class="page-grid row")
     div(class="page-grid__item flex-col")
       div(class="mb1")
-        button(class="btn btn--secondary")
-          span Secondary
+        +button("Secondary", "secondary")
           
       div(class="mb1")
-        button(class="btn btn--secondary")
-          span(class="material-icons btn__icon") add
-          span My List
+        +button("My List", "secondary", "add")
           
       div(class="mb1")
         button(class="btn btn--secondary loading")
@@ -98,3 +92,36 @@ block content
         button(class="btn btn--secondary", disabled)
           span(class="material-icons btn__icon") add
           span My List
+          
+    div(class="page-grid__item flex-col")
+      +code-example("html")
+        pre(class="language-html")
+          code(class="language-html").
+            &lt;button class="btn btn--secondary"&gt;Secondary&lt;/button&gt;
+            
+            &lt;button class="btn btn--secondary"&gt;
+              &lt;span class="material-icons"&gt;add&lt;/span&gt;
+              &lt;span&gt;My List&lt;/span&gt;
+            &lt;/button&gt;
+            
+            &lt;!-- Buttons with the loading class will 
+            hide their contents and show a spinner. --&gt;
+            
+            &lt;button class="btn btn--secondary loading"&gt;
+              &lt;span class="material-icons"&gt;add&lt;/span&gt;
+              &lt;span&gt;My List&lt;/span&gt;
+            &lt;/button&gt;
+            
+            &lt;button class="btn btn--secondary" disabled&gt;
+              &lt;span class="material-icons"&gt;add&lt;/span&gt;
+              &lt;span&gt;My List&lt;/span&gt;
+            &lt;/button&gt;
+            
+          
+      +code-example("mixin")
+        pre(class="language-pug")
+          code(class="language-pug").
+            // Button mixin takes text, type, and icon...
+            
+            +button("Secondary", "secondary")
+            +button("My List", "secondary", "add")

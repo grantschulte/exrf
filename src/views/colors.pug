@@ -2,7 +2,7 @@ extends shared/page
 include mixins/code-example
 
 block content
-  div(class="row")
+  div(class="row row--heading")
     div(class="col")
       h4(id="usage", class="heading sm up") Usage
       p.
@@ -12,7 +12,7 @@ block content
         colors and that we don't end up with repetetive definitions or 
         worse—the wrong colors.
         
-  div(class="row")
+  div(class="row row--heading")
     div(class="col")
       h4(class="heading sm up") Shudder Red
       
@@ -35,7 +35,7 @@ block content
               color: $red;
             }
             
-  div(class="row")
+  div(class="row row--heading")
     div(class="col")
       h4(class="heading sm up") Light Steel Gray
     
@@ -58,7 +58,7 @@ block content
               color: $gray;
             }
             
-  div(class="row")
+  div(class="row row--heading")
     div(class="col")
       h4(class="heading sm up") Steel Gray
       
@@ -81,7 +81,7 @@ block content
               color: $gray-light;
             }
             
-  div(class="row")
+  div(class="row row--heading")
     div(class="col")
       h4(class="heading sm up") Rich Black
       
@@ -104,7 +104,7 @@ block content
               color: $black-alt;
             }
             
-  div(class="row")
+  div(class="row row--heading")
     div(class="col")
       h4(class="heading sm up") Black
       
@@ -127,9 +127,9 @@ block content
               color: $black;
             }
 
-  div(class="row")
+  div(class="row row--heading")
     div(class="col")
-      h4(id="states") States, rollovers, and color grades
+      h4(id="states", class="heading sm up") States, rollovers, and color grades
       p.
         Rollover states should be achieved by using SCSS's built in 
         #[span(class="inline-code") darken()] and #[span(class="inline-code") lighten()] functions.
