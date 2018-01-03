@@ -1,0 +1,20 @@
+include ./button
+include ./play-circle
+
+mixin poster-card({ title, image, desc })
+  poster-card(class="poster-card js-poster-card")
+    img(src=image)
+    
+    poster-card(class="poster-card__overlay")
+      h4(class="headline sm up")= title
+      
+      +play-circle
+      
+      p(class="poster-card__desc")= desc
+        
+      +button({
+        type: "secondary",
+        text: "My List",
+        icon: "add",
+        size: "sm"
+      })

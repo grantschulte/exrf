@@ -60,6 +60,17 @@
     }
   }
 
+  &--sm {
+    height: 37px;
+    min-width: auto;
+    font-size: em(12px);
+    border-radius: 18px;
+
+    .btn__icon {
+      font-size: em(24px);
+    }
+  }
+
   // States
 
   &.loading {

@@ -1,10 +1,33 @@
 extends shared/page
+include mixins/code-example
+include mixins/poster-card
 
 block content
   div(class="row row--heading")
     div(class="col")
       h4(id="poster-card", class="heading sm up") Poster Card
-      
+  
+  div(class="page-grid row")
+    div(class="page-grid__item")
+      each movie in data.movies
+        +poster-card({
+          title: movie.title,
+          image: movie.image,
+          desc: movie.desc
+        })
+        
+    div(class="page-grid__item flex-col")
+      +code-example("pug")
+        pre(class="language-pug")
+          code(class="language-pug").
+            // Poster Cards take a title, an image url, and a description.
+            
+            +poster-card({
+              title: movie.title,
+              image: movie.image,
+              desc: movie.desc
+            })
+            
   div(class="row row--heading")
     div(class="col")
       h4(id="thumbnail-card", class="heading sm up") Thumbnail Card
