@@ -8,13 +8,23 @@
   &--portrait {
     width: 200px;
     height: 300px;
+
+    h4 {
+      margin-bottom: 1.25em;
+    }
   }
 
   &--landscape {
-    // width: 190px;
+    width: 320px;
+    height: 180px;
+
+    h4 {
+      margin-bottom: 1em;
+    }
   }
 
   img {
+    display: block;
     max-width: 100%;
   }
 
@@ -33,10 +43,6 @@
     background-color: rgba(0,0,0,0.75);
     opacity: 0;
     transition: 100ms opacity ease-in-out;
-  }
-
-  h4 {
-    margin-bottom: 1em;
   }
 
   &__desc {
