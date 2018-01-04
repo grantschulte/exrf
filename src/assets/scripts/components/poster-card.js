@@ -11,9 +11,12 @@ class PosterCard {
 
   truncateDescription() {
     let $desc = this.$el.querySelector(".poster-card__desc");
-    let style = window.getComputedStyle($desc);
-    let maxHeight = parseInt(style.getPropertyValue("max-height"), 10);
-    shave(".poster-card__desc", maxHeight);
+    
+    if ($desc) {
+      let style = window.getComputedStyle($desc);
+      let maxHeight = parseInt(style.getPropertyValue("max-height"), 10);
+      shave(".poster-card__desc", maxHeight);
+    }
   }
 }
 

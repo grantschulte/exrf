@@ -15,7 +15,8 @@ mixin poster-card({ type, video })
       
       +play-circle
       
-      p(class="poster-card__desc")= video.desc
+      if type === "portrait"
+        p(class="poster-card__desc")= video.desc
         
       +button({
         type: "secondary",

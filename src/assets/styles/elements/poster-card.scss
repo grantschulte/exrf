@@ -36,12 +36,13 @@
   }
 
   h4 {
-    margin-bottom: 1.25em;
+    margin-bottom: 1em;
   }
 
   &__desc {
     position: relative;
-    margin-top: 1.25em;
+    margin: 1.5em 0;
+    padding: 0 1em;
     max-height: 45px;
     font-size: em(12px);
     line-height: 1.25;
@@ -50,7 +51,7 @@
   }
 
   .btn--secondary {
-    margin-top: 0.875em;
+    margin-top: 1.5em;
   }
 
   &:hover {

@@ -22,10 +22,29 @@ block content
             // Poster Cards take a title, an image url, and a description.
             
             +poster-card({
-              type: "landscape",
+              type: "portrait",
               video: video
             })
             
   div(class="row row--heading")
     div(class="col")
       h4(id="thumbnail-card", class="heading sm up") Thumbnail Card
+      
+  div(class="page-grid row")
+    div(class="page-grid__item")
+      each video in data.videos
+        +poster-card({
+          type: "landscape",
+          video: video
+        })
+        
+    div(class="page-grid__item flex-col")
+      +code-example("pug")
+        pre(class="language-pug")
+          code(class="language-pug").
+            // Poster Cards take a title, an image url, and a description.
+            
+            +poster-card({
+              type: "landscape",
+              video: video
+            })
