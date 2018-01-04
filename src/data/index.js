@@ -43,8 +43,8 @@ module.exports = {
   videos: [{
     title: "The Nightmare",
     images: {
-      poster: "images/poster-example.jpg",
-      thumbnail: "images/thumbnail-example.jpg"
+      poster: "/images/poster-example.jpg",
+      thumbnail: "/images/thumbnail-example.jpg"
     },
     desc: "After a party where Tina watches a gruesome video on her friend’s phone, she begins to experience nasty nightmares. That would be bad enough, but then she begins to be haunted by a monster who nobody else can see."
   }]

@@ -8,5 +8,5 @@ window.onload = () => {
   Styleguide
     .menu("js-menu")
     .selectBoxes("js-slct")
-    .posterCards("js-poster-card");
+    .movieCards("js-movie-card");
 };

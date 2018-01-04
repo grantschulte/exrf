@@ -1,16 +1,16 @@
 extends shared/page
 include mixins/code-example
-include mixins/poster-card
+include mixins/movie-card
 
 block content
   div(class="row row--heading")
     div(class="col")
-      h4(id="poster-card", class="heading sm up") Poster Card
+      h4(id="portrait-card", class="heading sm up") Portrait Card
   
   div(class="page-grid row")
     div(class="page-grid__item")
       each video in data.videos
-        +poster-card({
+        +movie-card({
           type: "portrait",
           video: video
         })
@@ -19,21 +19,21 @@ block content
       +code-example("pug")
         pre(class="language-pug")
           code(class="language-pug").
-            // Poster Cards take a title, an image url, and a description.
+            // Movie cards take a type and a movie object.
             
-            +poster-card({
+            +movie-card({
               type: "portrait",
               video: video
             })
             
   div(class="row row--heading")
     div(class="col")
-      h4(id="thumbnail-card", class="heading sm up") Thumbnail Card
+      h4(id="landscape-card", class="heading sm up") Landscape Card
       
   div(class="page-grid row")
     div(class="page-grid__item")
       each video in data.videos
-        +poster-card({
+        +movie-card({
           type: "landscape",
           video: video
         })
@@ -42,9 +42,9 @@ block content
       +code-example("pug")
         pre(class="language-pug")
           code(class="language-pug").
-            // Poster Cards take a title, an image url, and a description.
+            // Movie cards take a type and a movie object.
             
-            +poster-card({
+            +movie-card({
               type: "landscape",
               video: video
             })

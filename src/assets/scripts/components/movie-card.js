@@ -1,6 +1,6 @@
 import shave from "shave";
 
-class PosterCard {
+class MovieCard {
   constructor(el) {
     Object.assign(this, {
       $el: el
@@ -10,14 +10,14 @@ class PosterCard {
   }
 
   truncateDescription() {
-    let $desc = this.$el.querySelector(".poster-card__desc");
-    
+    let $desc = this.$el.querySelector(".movie-card__desc");
+
     if ($desc) {
       let style = window.getComputedStyle($desc);
       let maxHeight = parseInt(style.getPropertyValue("max-height"), 10);
-      shave(".poster-card__desc", maxHeight);
+      shave(".movie-card__desc", maxHeight);
     }
   }
 }
 
-export default PosterCard;
+export default MovieCard;

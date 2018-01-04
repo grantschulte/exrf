@@ -1,4 +1,4 @@
-.poster-card {
+.movie-card {
   position: relative;
   border-radius: 2px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
@@ -61,7 +61,7 @@
   }
 
   &:hover {
-    .poster-card__overlay {
+    .movie-card__overlay {
       opacity: 1;
     }
 

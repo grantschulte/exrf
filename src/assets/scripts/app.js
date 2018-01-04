@@ -1,6 +1,6 @@
 import Menu from "./components/menu";
 import SelectBox from "./components/select-box";
-import PosterCard from "./components/poster-card";
+import MovieCard from "./components/movie-card";
 
 const Styleguide = {
   menu(className) {
@@ -19,11 +19,11 @@ const Styleguide = {
     return this;
   },
 
-  posterCards(className) {
+  movieCards(className) {
     const cards = document.getElementsByClassName(className);
 
     for (let card of cards) {
-      new PosterCard(card);
+      new MovieCard(card);
     }
 
     return this;
