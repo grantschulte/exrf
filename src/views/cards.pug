@@ -9,11 +9,10 @@ block content
   
   div(class="page-grid row")
     div(class="page-grid__item")
-      each movie in data.movies
+      each video in data.videos
         +poster-card({
-          title: movie.title,
-          image: movie.image,
-          desc: movie.desc
+          type: "portrait",
+          video: video
         })
         
     div(class="page-grid__item flex-col")
@@ -23,9 +22,8 @@ block content
             // Poster Cards take a title, an image url, and a description.
             
             +poster-card({
-              title: movie.title,
-              image: movie.image,
-              desc: movie.desc
+              type: "landscape",
+              video: video
             })
             
   div(class="row row--heading")
