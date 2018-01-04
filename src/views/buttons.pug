@@ -10,13 +10,23 @@ block content
   div(class="page-grid row")
     div(class="page-grid__item flex-col")
       div(class="mb1")
-        +button("Submit", "primary")
+        +button({
+          type: "primary",
+          text: "Submit"
+        })
       
       div(class="mb1")
-        +button("Login", "primary")
+        +button({
+          type: "primary",
+          text: "Submit"
+        })
       
       div(class="mb1")
-        +button("Play", "primary", "play_arrow")
+        +button({
+          type: "primary",
+          text: "Play",
+          icon: "play_arrow"
+        })
           
       div(class="mb1")
         button(class="btn btn--primary loading")
@@ -29,7 +39,11 @@ block content
           span Play
           
       div
-        +button("Resume S1:E1", "primary", "play_arrow")
+        +button({
+          type: "primary",
+          text: "Resume S1:E1",
+          icon: "play_arrow"
+        })
       
     div(class="page-grid__item flex-col")
       +code-example("html")
@@ -66,10 +80,27 @@ block content
           code(class="language-pug").
             // Button mixin takes text, type, and icon...
             
-            +button("Submit", "primary")
-            +button("Login", "primary")
-            +button("Login", "primary", "play_arrow")
-            +button("Resume S1:E1", "primary", "play_arrow")
+            +button({
+              type: "primary",
+              text: "Submit"
+            })
+            
+            +button({
+              type: "primary",
+              text: "Submit"
+            })
+            
+            +button({
+              type: "primary",
+              text: "Play",
+              icon: "play_arrow"
+            })
+            
+            +button({
+              type: "primary",
+              text: "Resume S1:E1",
+              icon: "play_arrow"
+            })
       
   div(class="row row--heading")
     div(class="col")
@@ -78,10 +109,17 @@ block content
   div(class="page-grid row")
     div(class="page-grid__item flex-col")
       div(class="mb1")
-        +button("Secondary", "secondary")
+        +button({
+          type: "secondary",
+          text: "Secondary"
+        })
           
       div(class="mb1")
-        +button("My List", "secondary", "add")
+        +button({
+          type: "secondary",
+          text: "My List",
+          icon: "add"
+        })
           
       div(class="mb1")
         button(class="btn btn--secondary loading")
@@ -123,5 +161,13 @@ block content
           code(class="language-pug").
             // Button mixin takes text, type, and icon...
             
-            +button("Secondary", "secondary")
-            +button("My List", "secondary", "add")
+            +button({
+              type: "secondary",
+              text: "Secondary"
+            })
+            
+            +button({
+              type: "secondary",
+              text: "My List",
+              icon: "add"
+            })
