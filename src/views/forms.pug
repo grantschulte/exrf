@@ -169,13 +169,19 @@ block content
   
   div(class="page-grid row")
     div(class="page-grid__item flex-col")
-      label(class="label") Do you have nightmares?
-      textarea(placeholder="Describe what you see...")
+      label(for="fears", class="label") What do you fear?
+      textarea(id="fears",
+        name="user[fears]",
+        placeholder="Describe your deepest fears...")
         
     div(class="page-grid__item")
       +code-example("pug")
         pre(class="language-pug")
           code(class="language-pug").
+            label(for="fears", class="label") What do you fear?
+            textarea(id="fears",
+              name="user[fears]",
+              placeholder="Describe your deepest fears...")
       
   div(class="row row--heading")
     div(class="col")
