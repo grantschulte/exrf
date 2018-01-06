@@ -1,15 +1,8 @@
-label {
-  &.label {
-    margin-bottom: 0.5em;
-    display: block;
-    font-size: em(14px);
-    font-family: $font-roboto;
-    font-weight: 900;
-    color: lighten($gray-blue, 25%);
-  }
-}
-
-input {
+input[type="text"],
+input[type="phone"],
+input[type="email"],
+input[type="password"],
+input[type="number"] {
   display: block;
   height: 38px;
   min-width: 300px;
@@ -39,6 +32,66 @@ input {
 
   @include bp-max($sm) {
     width: 100%;
+  }
+}
+
+input[type="radio"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  order: 0;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border: 1px solid $gray-blue;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:checked {
+    border-color: lighten($gray-blue, 25%);
+
+    &:after {
+      content: "";
+      height: 6px;
+      width: 6px;
+      border-radius: 50%;
+      display: inline-block;
+      background-color: lighten($gray-blue, 25%);
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+input[type="checkbox"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  order: 0;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border: 1px solid $gray-blue;
+  border-radius: 0px;
+  cursor: pointer;
+
+  &:checked {
+    border-color: lighten($gray-blue, 25%);
+
+    &:after {
+      font-family: "Material Icons";
+      font-size: 14px;
+      line-height: 1;
+      display: inline-block;
+      content: "\E5CA";
+      color: lighten($gray-blue, 25%);
+    }
+  }
+
+  &:focus {
+    outline: none;
   }
 }
 
