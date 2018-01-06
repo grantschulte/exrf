@@ -30,9 +30,9 @@ const pages = [
     slug: "cards"
   },
   {
-    name: "Logo",
-    path: "/logo",
-    slug: "logo"
+    name: "Logos",
+    path: "/logos",
+    slug: "logos"
   }
 ];
 

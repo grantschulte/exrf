@@ -42,6 +42,11 @@ a {
   }
 }
 
+img {
+  border: none;
+  max-width: 100%;
+}
+
 form {
   @include bp-max($sm) {
     display: block;

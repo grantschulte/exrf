@@ -42,11 +42,11 @@ module.exports = (env) => {
         },
         {
           test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-          loader: `file-loader?name=${dirs.public}/fonts/[name].[ext]`
+          loader: `file-loader?name=${dirs.public}/fonts/**/[name].[ext]`
         },
         {
           test: /\.(ico|png|jpg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-          loader: `file-loader?name=${dirs.public}/images/[name].[ext]`
+          loader: `file-loader?name=${dirs.public}/images/**/[name].[ext]`
         }
       ]
     },
@@ -159,7 +159,7 @@ module.exports = (env) => {
           }
         ]
       },
-      
+
       plugins: [
         new UglifyWebpackPlugin(),
         new ImageminPlugin({

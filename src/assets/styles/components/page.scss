@@ -31,7 +31,6 @@
   }
 
   .col {
-    // border-bottom: 2px solid map-get($colors-brand, black-alt);
     flex: 1;
   }
 
@@ -42,7 +41,7 @@
 
     h1 {
       width: 100%;
-      margin: 1em 0 0 0;
+      margin: 1.25em 0 0 0;
       padding-bottom: 1em;
       border-bottom: 3px solid $red;
     }

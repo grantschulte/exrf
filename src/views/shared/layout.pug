@@ -15,7 +15,9 @@ html
           div#header
             div(id="logo")
               a(href="/")
-                img(src="/images/shudder.png")
+                img(
+                  src="/images/shudder-logo.png",
+                  srcset="/images/shudder-logo.png 1x, /images/shudder-logo@2x.png 2x, /images/shudder-logo@3x.png 3x")
             div(id="menu-icon", class="js-menu-trigger")
               span(class="material-icons") menu
             block menu
