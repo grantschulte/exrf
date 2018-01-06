@@ -7,9 +7,9 @@
   legend {
     margin-bottom: 0.5em;
     display: block;
-    font-size: em(14px);
+    font-size: em(15px);
     font-family: $font-roboto;
-    font-weight: 900;
+    font-weight: 500;
     color: lighten($gray-blue, 25%);
   }
 
@@ -36,9 +36,9 @@ label {
   &.label {
     margin-bottom: 0.5em;
     display: block;
-    font-size: em(14px);
+    font-size: em(15px);
     font-family: $font-roboto;
-    font-weight: 900;
+    font-weight: 500;
     color: lighten($gray-blue, 25%);
   }
 }
