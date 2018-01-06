@@ -30,7 +30,7 @@ code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-select
 	padding: 1em 2em;
 	white-space: pre-wrap;
 	font-size: em(14px);
-	color: map-get($colors-brand, gray-light);
+	color: $gray-light;
 }
 
 pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
@@ -40,7 +40,7 @@ code[class*="language-"]::selection, code[class*="language-"] ::selection {
 	padding: 1em 2em;
 	white-space: pre-wrap;
 	font-size: em(14px);
-	color: map-get($colors-brand, gray-light);
+	color: $gray-light;
 }
 
 @media print {
@@ -59,7 +59,7 @@ pre[class*="language-"] {
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-	background-color: darken(map-get($colors-brand, gray), 2.5%);
+	background-color: darken($gray, 2.5%);
 }
 
 /* Inline code */
@@ -77,7 +77,7 @@ pre[class*="language-"] {
 }
 
 .token.punctuation {
-	color: darken(map-get($colors-brand, gray-light), 10%);
+	color: darken($gray-light, 10%);
 }
 
 .namespace {
@@ -91,7 +91,7 @@ pre[class*="language-"] {
 .token.constant,
 .token.symbol,
 .token.deleted {
-	color: lighten(map-get($colors-brand, gray), 50%);
+	color: lighten($gray, 50%);
 }
 
 .token.selector,
@@ -100,7 +100,7 @@ pre[class*="language-"] {
 .token.char,
 .token.builtin,
 .token.inserted {
-	color: lighten(map-get($colors-brand, red), 25%);
+	color: lighten($red, 25%);
 }
 
 .token.operator,
@@ -108,23 +108,23 @@ pre[class*="language-"] {
 .token.url,
 .language-css .token.string,
 .style .token.string {
-	color: map-get($colors-brand, gray-light);
+	color: $gray-light;
 }
 
 .token.atrule,
 .token.attr-value,
 .token.keyword {
-	color: lighten(map-get($colors-brand, gray), 50%);
+	color: lighten($gray, 50%);
 }
 
 .token.function {
-	color: lighten(map-get($colors-brand, gray), 37.5%);
+	color: lighten($gray, 37.5%);
 }
 
 .token.regex,
 .token.important,
 .token.variable {
-	color: map-get($colors-brand, gray);
+	color: $gray;
 }
 
 .token.important,

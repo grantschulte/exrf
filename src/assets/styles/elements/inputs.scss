@@ -9,7 +9,7 @@ input[type="number"] {
   font-size: em(15px);
   color: $black;
   background-color: $white;
-  border: 2px solid $white;
+  border: 1px solid $white;
   border-radius: 2px;
   padding: 0 0.5em;
   transition: 200ms border ease-in-out;
@@ -23,11 +23,11 @@ input[type="number"] {
   }
 
   &.valid {
-    border: 2px solid $green;
+    border-color: $green;
   }
 
   &.invalid {
-    border: 2px solid $red;
+    border-color: lighten($red, 25%);
   }
 
   @include bp-max($sm) {
@@ -115,6 +115,6 @@ input[type="checkbox"] {
   }
 
   &.error {
-    color: $red;
+    color: lighten($red, 25%);
   }
 }
