@@ -1,4 +1,4 @@
 node_modules
 test
 public
-src/assets/scripts/lib/**/*.js
+build
