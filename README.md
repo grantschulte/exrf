@@ -1,3 +1,1 @@
-# Styleguide
-
-A styleguide shell.
+# Express, React, Flow, and Webpack Starter

@@ -8,24 +8,13 @@ const dotenv = require("dotenv");
 const app = express();
 const { dirs } = require("./config");
 
-// Mock data
-
-const mocks = require("./data");
-
 dotenv.load();
 
 // Configuration
 
 app
   .set("port", process.env.PORT || 8080)
-  .set("view engine", "pug")
-  .set("views", path.join(__dirname, "views"))
   .set("json spaces", 2);
-
-app.locals = {
-  version: require("../package.json").version,
-  data: mocks
-};
 
 // Middleware
 
@@ -34,18 +23,18 @@ app
   .use(bodyParser.json())
   .use(bodyParser.urlencoded({ extended: true }))
   .use(cookieParser())
-  .use(express.static(dirs.public));
+  .use(express.static(dirs.client.build));
 
 // Routes
 
 app
-  .use("/", (req, res, next) => {
-    res.render("home");
+  .use("/api", (req, res) => {
+    res.json({
+      sup: "sup"
+    });
   })
-  .use("*", (req, res) => {
-    res
-      .status(404)
-      .render("404");
+  .get("*", (req, res) => {
+    res.sendFile(`${dirs.client.build}/index.html`);
   });
 
 // Error Handling

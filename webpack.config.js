@@ -8,7 +8,7 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 const UglifyWebpackPlugin = require("uglifyjs-webpack-plugin");
 const ImageminPlugin = require("imagemin-webpack-plugin").default;
 
-const { dirs } = require("./src/config");
+const { dirs } = require("./server/config");
 
 module.exports = (env) => {
   const target = process.env.npm_lifecycle_event;
@@ -17,11 +17,11 @@ module.exports = (env) => {
 
   const common = {
     entry: {
-      "app": path.join(dirs.src.assets, "scripts", "index.js")
+      "app": path.join(dirs.client.src, "index.js")
     },
 
     output: {
-      path: dirs.public,
+      path: dirs.client.build,
       filename: "scripts/[name].js",
       publicPath: "/"
     },
@@ -36,16 +36,23 @@ module.exports = (env) => {
           }
         },
         {
+          test: /\.jsx$/,
+          loader: "babel-loader",
+          query: {
+            presets: ["es2015"]
+          }
+        },
+        {
           test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-          loader: "url-loader?limit=10000&mimetype=application/font-woff",
+          loader: "url-loader?limit=10000&mimetype=application/font-woff"
         },
         {
           test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-          loader: `file-loader?name=${dirs.public}/fonts/**/[name].[ext]`
+          loader: `file-loader?name=${dirs.client.src}/fonts/**/[name].[ext]`
         },
         {
           test: /\.(ico|png|jpg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-          loader: `file-loader?name=${dirs.public}/images/**/[name].[ext]`
+          loader: `file-loader?name=${dirs.client.src}/images/**/[name].[ext]`
         }
       ]
     },
@@ -68,13 +75,18 @@ module.exports = (env) => {
       }),
       new CopyWebpackPlugin([
         {
-          from: `${dirs.src.assets}/images/**/*`,
-          to: `${dirs.public}/images`,
+          from: `${dirs.client.public}/**/*`,
+          to: dirs.client.build,
           flatten: true
         },
         {
-          from: `${dirs.src.assets}/fonts/**/*`,
-          to: `${dirs.public}/fonts`,
+          from: `${dirs.client.src}/images/**/*`,
+          to: `${dirs.client.build}/images`,
+          flatten: true
+        },
+        {
+          from: `${dirs.client.src}/fonts/**/*`,
+          to: `${dirs.client.build}/fonts`,
           flatten: true
         }
       ])
@@ -122,6 +134,10 @@ module.exports = (env) => {
 
       stats: {
         colors: true
+      },
+
+      devServer: {
+        port: 9000
       }
     });
   }
