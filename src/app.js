@@ -6,8 +6,7 @@ const cookieParser = require("cookie-parser");
 const dotenv = require("dotenv");
 
 const app = express();
-const isPage = require("./middleware/is-page");
-const { dirs, pages } = require("./config");
+const { dirs } = require("./config");
 
 // Mock data
 
@@ -24,7 +23,6 @@ app
   .set("json spaces", 2);
 
 app.locals = {
-  pages,
   version: require("../package.json").version,
   data: mocks
 };
@@ -41,11 +39,8 @@ app
 // Routes
 
 app
-  .use("/:page", isPage(), (req, res, next) => {
-    res.render(req.page.slug);
-  })
   .use("/", (req, res, next) => {
-    res.redirect("/overview");
+    res.render("home");
   })
   .use("*", (req, res) => {
     res

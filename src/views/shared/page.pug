@@ -1,7 +1,5 @@
 extends ./layout
-include ../mixins/page-heading
 
 block page
-  +page-heading(currentPage.name)
   div(id="page__content")
     block content

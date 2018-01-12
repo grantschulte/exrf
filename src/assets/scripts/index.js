@@ -1,12 +1,9 @@
 import "../styles/manifest.scss";
 
-import Styleguide from "./app";
+import App from "./app";
 
 // Initialize Application
 
 window.onload = () => {
-  Styleguide
-    .menu("js-menu")
-    .selectBoxes("js-slct")
-    .movieCards("js-movie-card");
+  console.log("Client Loaded.", App);
 };

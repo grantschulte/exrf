@@ -17,8 +17,7 @@ module.exports = (env) => {
 
   const common = {
     entry: {
-      "app": path.join(dirs.src.assets, "scripts", "index.js"),
-      "lib": path.join(dirs.src.assets, "scripts", "lib.js")
+      "app": path.join(dirs.src.assets, "scripts", "index.js")
     },
 
     output: {

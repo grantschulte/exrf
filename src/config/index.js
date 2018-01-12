@@ -1,5 +1,4 @@
 const path = require("path");
-const pages = require("./pages");
 
 const rootDir = process.cwd();
 
@@ -14,6 +13,5 @@ const dirs = {
 };
 
 module.exports = {
-  dirs,
-  pages
+  dirs
 };

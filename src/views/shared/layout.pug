@@ -1,11 +1,9 @@
 html
   head
-    title Shudder Styleguide - #{currentPage.name}
+    title Star Trek Card Game Online
     meta(name="viewport", content="width=device-width, initial-scale=1")
     block styles
       link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
-      link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900")
-      link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,500,700")
       link(rel="stylesheet", href="/styles/lib.css")
       link(rel="stylesheet", href="/styles/app.css")
   body
@@ -13,17 +11,8 @@ html
       div#main-container
         block header
           div#header
-            div(id="logo")
-              a(href="/")
-                img(
-                  src="/images/shudder-logo.png",
-                  srcset="/images/shudder-logo.png 1x, /images/shudder-logo@2x.png 2x, /images/shudder-logo@3x.png 3x")
-            div(id="menu-icon", class="js-menu-trigger")
-              span(class="material-icons") menu
-            block menu
-              include menu
         div#page-container
-          div(id="page", class=`page-${currentPage.slug}`)
+          div(id="page")
             block page
           
     block scripts

@@ -1,8 +1,0 @@
-nav(id="menu", class="js-menu")
-  div(id="close", class="js-menu-close")
-    span(class="material-icons") close
-  ul
-    each page in pages
-      li(class=`menu-link-${page.slug}`)
-        a(class={ active: isActive(page) }, href=page.path)= page.name
-      
