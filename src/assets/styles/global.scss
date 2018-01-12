@@ -12,25 +12,49 @@ body {
   padding: 0;
   margin: 0;
   font-size: 16px;
-  font-family: $font-lcars;
+  font-family: $font-roboto;
   height: 100%;
   width: 100%;
-  background-color: map-get($colors-lcars, black);
-  color: $white;
+  background-color: darken(map-get($colors-brand, black-alt), 2.5%);
+
+  &.menu-open {
+    overflow: hidden;
+  }
 }
 
 p {
+  color: $white;
+  line-height: 1.5;
 
+  &.sm {
+    font-size: em(12px);
+  }
 }
 
 a {
+  color: $white;
+  text-transform: none;
+  text-decoration: none;
+  transition: 200ms color ease-in-out;
 
+  &:hover {
+    color: map-get($colors-brand, red);
+  }
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: $font-lcars;
+img {
+  border: none;
+  max-width: 100%;
+}
+
+form {
+  @include bp-max($sm) {
+    display: block;
+    width: 100%;
+  }
 }
 
 ::selection {
-
+  background-color: $red;
+  color: $white;
 }

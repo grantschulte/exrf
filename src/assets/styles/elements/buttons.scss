@@ -1,0 +1,140 @@
+.btn {
+  display: flex;
+  padding: 0 2em;
+  align-items: center;
+  justify-content: center;
+  height: 46px;
+  min-width: 180px;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.5);
+  font-size: em(16px);
+  font-weight: 900;
+  color: $white;
+  letter-spacing: -1px;
+  transition: 200ms all ease-in-out;
+  cursor: pointer;
+
+  &__icon {
+    margin-left: -0.5em;
+    margin-right: 0.25em;
+  }
+
+  &--primary {
+    background-color: $red;
+
+    &:hover {
+      background-color: darken($red, 5%);
+    }
+
+    &:active {
+      background-color: darken($red, 10%);
+    }
+
+    &.loading {
+      background-color: $red;
+    }
+  }
+
+  &--secondary {
+    background-color: $black;
+    border: 2px solid $white;
+
+    &:hover {
+      color: $red;
+      border-color: $red;
+      background-color: lighten($black, 5%);
+    }
+
+    &:active {
+      background-color: lighten($black, 10%);
+    }
+
+    &.loading {
+      background-color: $black;
+
+      &:hover {
+        color: $white;
+        border-color: $white;
+      }
+    }
+  }
+
+  &--sm {
+    height: 37px;
+    min-width: auto;
+    font-size: em(12px);
+    border-radius: 18px;
+
+    .btn__icon {
+      font-size: em(24px);
+    }
+  }
+
+  // States
+
+  &.loading {
+    text-indent: -9999em;
+    overflow: hidden;
+
+    &:after {
+      position: relative;
+      content: "";
+      font-size: 4px;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      text-indent: -9999em;
+      animation: spin 1.1s infinite ease;
+      transform: translateZ(0);
+    }
+
+    span {
+      display: none;
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:disabled {
+    border-color: $gray;
+    background-color: $gray;
+    color: lighten($gray, 20%);
+  }
+
+  @include bp-max($sm) {
+    width: 100%;
+  }
+}
+
+// Button Loading Animation
+
+@keyframes spin {
+  0%,
+  100% {
+    box-shadow: 0em -2.6em 0em 0em #ffffff, 1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2), 2.5em 0em 0 0em rgba(255, 255, 255, 0.2), 1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2), 0em 2.5em 0 0em rgba(255, 255, 255, 0.2), -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2), -2.6em 0em 0 0em rgba(255, 255, 255, 0.5), -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.7);
+  }
+  12.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.7), 1.8em -1.8em 0 0em #ffffff, 2.5em 0em 0 0em rgba(255, 255, 255, 0.2), 1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2), 0em 2.5em 0 0em rgba(255, 255, 255, 0.2), -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2), -2.6em 0em 0 0em rgba(255, 255, 255, 0.2), -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.5);
+  }
+  25% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.5), 1.8em -1.8em 0 0em rgba(255, 255, 255, 0.7), 2.5em 0em 0 0em #ffffff, 1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2), 0em 2.5em 0 0em rgba(255, 255, 255, 0.2), -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2), -2.6em 0em 0 0em rgba(255, 255, 255, 0.2), -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+  }
+  37.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2), 1.8em -1.8em 0 0em rgba(255, 255, 255, 0.5), 2.5em 0em 0 0em rgba(255, 255, 255, 0.7), 1.75em 1.75em 0 0em #ffffff, 0em 2.5em 0 0em rgba(255, 255, 255, 0.2), -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2), -2.6em 0em 0 0em rgba(255, 255, 255, 0.2), -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2), 1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2), 2.5em 0em 0 0em rgba(255, 255, 255, 0.5), 1.75em 1.75em 0 0em rgba(255, 255, 255, 0.7), 0em 2.5em 0 0em #ffffff, -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2), -2.6em 0em 0 0em rgba(255, 255, 255, 0.2), -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+  }
+  62.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2), 1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2), 2.5em 0em 0 0em rgba(255, 255, 255, 0.2), 1.75em 1.75em 0 0em rgba(255, 255, 255, 0.5), 0em 2.5em 0 0em rgba(255, 255, 255, 0.7), -1.8em 1.8em 0 0em #ffffff, -2.6em 0em 0 0em rgba(255, 255, 255, 0.2), -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+  }
+  75% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2), 1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2), 2.5em 0em 0 0em rgba(255, 255, 255, 0.2), 1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2), 0em 2.5em 0 0em rgba(255, 255, 255, 0.5), -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.7), -2.6em 0em 0 0em #ffffff, -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+  }
+  87.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2), 1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2), 2.5em 0em 0 0em rgba(255, 255, 255, 0.2), 1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2), 0em 2.5em 0 0em rgba(255, 255, 255, 0.2), -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.5), -2.6em 0em 0 0em rgba(255, 255, 255, 0.7), -1.8em -1.8em 0 0em #ffffff;
+  }
+}

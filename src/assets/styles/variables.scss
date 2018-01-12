@@ -6,23 +6,33 @@
 
 // Fonts
 
-$font-lcars: "LCARS", Helvetica, sans-serif;
-$font-lcars-condensed: "LCARS-Condensed", Helvetica, sans-serif;
+$font-roboto: "Roboto", Helvetica, sans-serif;
+$font-roboto-condensed: "Roboto Condensed", Helvetica, sans-serif;
 
 // Colors
 
-$colors-lcars: (
+$colors-brand: (
+  red: #c80000,
   black: #000000,
-  purple: #9999FF,
-  blue: #9999CC,
-  orange: #FF9900,
-  beige: #FFCC99,
-  magenta: #BC9BC1,
-  rose: #CC99CC
+  black-alt: #161f22,
+  gray: #7f959c,
+  gray-light: #c5d1d3
+);
+
+$colors-text: (
+  gray-blue: lighten(map-get($colors-brand, black-alt), 20%)
 );
 
 $black: #000000;
 $white: #FFFFFF;
+$green: #87A878;
+$yellow: #c5d1d3;
+$red:        map-get($colors-brand, red);
+$black:      map-get($colors-brand, black);
+$black-alt:  map-get($colors-brand, black-alt);
+$gray:       map-get($colors-brand, gray);
+$gray-blue:  map-get($colors-text, gray-blue);
+$gray-light: map-get($colors-brand, gray-light);
 
 // Stacking Context
 

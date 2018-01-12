@@ -1,0 +1,78 @@
+#menu {
+  display: flex;
+
+  ul {
+    display: flex;
+    flex-flow: column;
+    list-style: none;
+    padding: 0;
+    margin: 1em 0;
+
+    a {
+      display: flex;
+      align-items: center;
+      padding: 0.75em 0;
+      font-family: $font-roboto-condensed;
+      font-weight: bold;
+      font-size: em(14px);
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 1);
+      text-shadow: 0 0 1px rgba(255, 255, 255, 0);
+      transition: 200ms all ease-in-out;
+
+      &.active,
+      &:hover {
+        color: rgba(255, 255, 255, 0);
+        text-shadow: 0 0 1px rgba(255, 255, 255, 0.8);
+      }
+    }
+  }
+
+  #close {
+    display: none;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    color: $white;
+    cursor: pointer;
+
+    .material-icons {
+      font-size: em(28px);
+    }
+
+    &:hover {
+      color: map-get($colors-brand, gray);
+    }
+
+    @include bp-max($md) {
+      display: inline-block;
+    }
+  }
+
+  &.open {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    background-color: map-get($colors-brand, black-alt);
+    z-index: map-get($z-index, modal);
+
+    ul {
+      height: calc(100% - 1em);
+      overflow: scroll;
+      margin: 1em 0 0 0;
+      padding: 2em;
+    }
+  }
+
+  @include bp-max($md) {
+    display: none;
+
+    #close {
+      display: inline-block;
+    }
+  }
+}

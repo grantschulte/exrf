@@ -1,4 +1,3 @@
-import "../styles/fonts.scss";
 import "../styles/manifest.scss";
 
 import App from "./app";
