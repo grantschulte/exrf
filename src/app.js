@@ -39,8 +39,8 @@ app
 // Routes
 
 app
-  .use("/", (req, res, next) => {
-    res.render("home");
+  .use("/lcars", (req, res, next) => {
+    res.render("lcars");
   })
   .use("*", (req, res) => {
     res

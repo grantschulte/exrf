@@ -1,4 +1,4 @@
-@each $name, $value in $colors-brand {
+@each $name, $value in $colors-lcars {
   .color--#{$name} {
     color: $value;
   }
@@ -44,14 +44,6 @@
 
 .flex-wrap {
   flex-wrap: wrap;
-}
-
-// Code
-
-.inline-code {
-  font-size: 0.875em;
-  padding: 4px;
-  background-color: lighten(map-get($colors-brand, black-alt), 5%);
 }
 
 // Elements
