@@ -1,6 +1,6 @@
 # Express, React, Flow, and Webpack Starter
 
-## Table of Contents
+#### Table of Contents
 - [Summary](#summary)
 - [Setup](#setup)
 - [Development](#development)
