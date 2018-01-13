@@ -3,21 +3,24 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-import Welcome from "../welcome/welcome";
+import Home from "../home/home";
+import About from "../about/about";
 
-const Home = () => (
-  <div>
-    <h1>Home</h1>
-  </div>
-);
+import "./app.scss";
 
 function App() {
   return (
     <Router>
       <div id="app">
-        {/* Header Menu */}
-        <Route exact path="/" component={Home} />
-        <Route exact path="/welcome" component={Welcome} />
+        <header id="app__header">
+          <Link to="/">Home</Link>
+          <Link to="/about">About</Link>
+        </header>
+
+        <div id="app__page">
+          <Route exact path="/" component={Home} />
+          <Route exact path="/about" component={About} />
+        </div>
       </div>
     </Router>
   );

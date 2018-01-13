@@ -1,3 +1,17 @@
 #app {
-  
+  &__header {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding: 1rem;
+
+    a {
+      display: inline-block;
+      margin-right: 1em;
+    }
+  }
+
+  &__page {
+    padding: 1rem;
+  }
 }
