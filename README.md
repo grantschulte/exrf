@@ -4,6 +4,7 @@
 - [Overview](#overview)
   - [Client](#client)
   - [Server](#server)
+  - [Database](#database)
 - [Setup](#setup)
   - [Development](#development)
   - [Production](#production)
@@ -18,6 +19,9 @@ In development the client is served from memory by Webpack Dev Server. This enab
 
 ### Server
 The Express server serves both the API `/api` and the client `/` in production. Since the client uses Webpack Dev Server it is not necessary for the Express server to handle this in development.
+
+### Database
+This project uses Mongo as a database. Ensure that you have MongoDB installed and that the mongo daemon is running: `mongod`
 
 ## Setup
 This project requires Yarn. Install dependencies:

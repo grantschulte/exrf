@@ -1,11 +1,14 @@
 const express = require("express");
 const path = require("path");
 const morgan = require("morgan");
+const mongoose    = require("mongoose");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const dotenv = require("dotenv");
 
 const app = express();
+const db  = require("./db");
+
 const { dirs, port } = require("./config");
 const { isProd } = require("./utils");
 const routes = require("./routes/api");
