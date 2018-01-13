@@ -142,7 +142,8 @@ module.exports = (env) => {
       },
 
       devServer: {
-        port: 9000
+        port: 9000,
+        historyApiFallback: true
       }
     });
   }

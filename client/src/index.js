@@ -1,10 +1,14 @@
 /* @flow */
 
-import "./index.css";
+import React from "react";
+import ReactDOM from "react-dom";
 
-function greet(message: string): string {
-  console.log(message);
-  return message;
-}
+import App from "./app/app";
+import "./index.scss";
 
-greet("Hello World.");
+const rootEl = document.getElementById("root");
+
+ReactDOM.render(
+  <App />,
+  rootEl
+);
