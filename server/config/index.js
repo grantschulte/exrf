@@ -1,5 +1,9 @@
 const path = require("path");
 
+const port = process.env.NODE_ENV === "test"
+  ? 8081
+  : process.env.PORT || 8080;
+
 const rootDir = process.cwd();
 
 const dirs = {
@@ -16,5 +20,6 @@ const dirs = {
 };
 
 module.exports = {
-  dirs
+  dirs,
+  port
 };

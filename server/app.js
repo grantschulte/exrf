@@ -6,7 +6,7 @@ const cookieParser = require("cookie-parser");
 const dotenv = require("dotenv");
 
 const app = express();
-const { dirs } = require("./config");
+const { dirs, port } = require("./config");
 const { isProd } = require("./utils");
 const routes = require("./routes/api");
 const errors = require("./middlewares/errors");
@@ -16,7 +16,7 @@ dotenv.load();
 // Configuration
 
 app
-  .set("port", process.env.PORT || 8080)
+  .set("port", port)
   .set("json spaces", 2);
 
 // Middleware
