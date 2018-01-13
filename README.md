@@ -1,14 +1,16 @@
 # Express, React, Flow, and Webpack Starter
 
 #### Table of Contents
-- [Summary](#summary)
+- [Overview](#overview)
+  - [Client](#client)
+  - [Server](#server)
 - [Setup](#setup)
-- [Development](#development)
-- [Production](#production)
+  - [Development](#development)
+  - [Production](#production)
 
 ---
 
-## Summary
+## Overview
 This project uses Express to serve a JSON API and a React front-end client.
 
 ### Client
