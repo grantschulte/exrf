@@ -12,7 +12,8 @@
     "lint:server": "eslint ./server/**/*.js",
     "server:dev": "nodemon server.js",
     "start": "node server.js",
-    "test:server": "NODE_ENV=test mocha ./server/tests/** --exit"
+    "test:server": "NODE_ENV=test mocha ./client/src/**/*.spec.js --exit",
+    "test:server": "NODE_ENV=test mocha ./server/**/*.spec.js --exit"
   },
   "author": "Grant J. Schulte <schulte.grant@gmail.com>",
   "license": "MIT",

@@ -2,8 +2,8 @@ process.env.NODE_ENV = "test";
 
 const chai = require("chai");
 const chaiHttp = require("chai-http");
-const server = require("../../../server");
-const { port } = require("../../config");
+const server = require("../../server");
+const { port } = require("../config");
 
 const rootUrl = `http://localhost:${port}`;
 const expect = chai.expect;
