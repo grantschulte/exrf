@@ -8,7 +8,11 @@ import "./index.scss";
 
 const rootEl = document.getElementById("root");
 
-ReactDOM.render(
-  <App />,
-  rootEl
-);
+if (rootEl) {
+  ReactDOM.render(
+    <App />,
+    rootEl
+  );
+} else {
+  throw new Error("No root element present.");
+}
