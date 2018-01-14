@@ -8,6 +8,7 @@
 - [Setup](#setup)
   - [Development](#development)
   - [Production](#production)
+- [Directory Structure](#directory-structure)
 
 ---
 
@@ -58,3 +59,22 @@ yarn start
 ```
 
 Access the app at `localhost:8080`
+
+## Directory Structure
+```
+.
+├──bin
+│   └──www
+├──client
+│   ├──flow -- flow definitions
+│   ├──public -- index.html and static assets
+│   └──src -- front-end components
+└──server
+    ├──config -- server config
+    ├──controllers -- route handlers
+    ├──db -- mongoose/mongo connection
+    ├──middlewares -- Express middleware
+    ├──models -- mongoose schemas
+    ├──routes -- routers and route definitions
+    └──utils -- utility functions
+```

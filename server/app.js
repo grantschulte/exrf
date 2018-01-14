@@ -9,7 +9,7 @@ const dotenv = require("dotenv");
 const app = express();
 const db  = require("./db");
 
-const { dirs, port } = require("./config");
+const { dirs, port } = require("./config").app;
 const { isProd } = require("./utils");
 const routes = require("./routes/api");
 const errors = require("./middlewares/errors");
